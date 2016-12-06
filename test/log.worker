@@ -1,0 +1,142 @@
+[2016-12-06 11:36:39,186: WARNING/MainProcess] /HOME/nscc-gz_jiangli/.virtualenvs/py34env-rh6.5/lib/python3.4/site-packages/celery/apps/worker.py:161: CDeprecationWarning: 
+Starting from version 3.2 Celery will refuse to accept pickle by default.
+
+The pickle serializer is a security concern as it may give attackers
+the ability to execute any command.  It's important to secure
+your broker from unauthorized access when using pickle, so we think
+that enabling pickle should require a deliberate action and not be
+the default choice.
+
+If you depend on pickle then you should set a setting to disable this
+warning and to be sure that everything will continue working
+when you upgrade to Celery 3.2::
+
+    CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
+
+You must only enable the serializers that you will actually use.
+
+
+  warnings.warn(CDeprecationWarning(W_PICKLE_DEPRECATED))
+[2016-12-06 11:36:39,188: WARNING/MainProcess] /HOME/nscc-gz_jiangli/.virtualenvs/py34env-rh6.5/lib/python3.4/site-packages/celery/apps/worker.py:161: CDeprecationWarning: 
+Starting from version 3.2 Celery will refuse to accept pickle by default.
+
+The pickle serializer is a security concern as it may give attackers
+the ability to execute any command.  It's important to secure
+your broker from unauthorized access when using pickle, so we think
+that enabling pickle should require a deliberate action and not be
+the default choice.
+
+If you depend on pickle then you should set a setting to disable this
+warning and to be sure that everything will continue working
+when you upgrade to Celery 3.2::
+
+    CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
+
+You must only enable the serializers that you will actually use.
+
+
+  warnings.warn(CDeprecationWarning(W_PICKLE_DEPRECATED))
+[2016-12-06 11:36:39,555: INFO/MainProcess] Connected to redis://cn5834:6379//
+[2016-12-06 11:36:39,563: INFO/MainProcess] Connected to redis://cn5834:6379//
+[2016-12-06 11:36:39,570: INFO/MainProcess] mingle: searching for neighbors
+[2016-12-06 11:36:39,578: INFO/MainProcess] mingle: searching for neighbors
+[2016-12-06 11:36:40,579: INFO/MainProcess] mingle: all alone
+[2016-12-06 11:36:40,584: INFO/MainProcess] mingle: all alone
+[2016-12-06 11:36:40,602: WARNING/MainProcess] celery@cn5835 ready.
+[2016-12-06 11:36:40,604: WARNING/MainProcess] celery@cn5834 ready.
+[2016-12-06 11:36:40,935: INFO/MainProcess] Received task: ht_celery.tasks.run_command[ac8e7764-a268-469b-8c69-8fc5d8101809]
+[2016-12-06 11:36:40,936: INFO/MainProcess] Received task: ht_celery.tasks.run_command[1fb962de-b31c-4d1c-9ed5-60453bc1f086]
+[2016-12-06 11:36:40,951: INFO/MainProcess] Received task: ht_celery.tasks.run_command[ba612ea7-d3c9-404e-94e3-e79247e4da6c]
+[2016-12-06 11:36:40,955: INFO/MainProcess] Received task: ht_celery.tasks.run_command[a1dfc534-b7b0-49de-9726-95722adc22d9]
+[2016-12-06 11:36:40,971: INFO/MainProcess] Received task: ht_celery.tasks.run_command[335f3bb8-a460-4776-8f10-952f7bf44765]
+[2016-12-06 11:36:40,977: INFO/MainProcess] Received task: ht_celery.tasks.run_command[aa26a21e-01e6-4408-bfe0-b147b7bc32f5]
+[2016-12-06 11:36:40,993: INFO/MainProcess] Received task: ht_celery.tasks.run_command[9567fb10-5acd-492b-9807-fb5da55fcb42]
+[2016-12-06 11:36:40,996: INFO/MainProcess] Received task: ht_celery.tasks.run_command[da48759c-8c52-4eef-95ec-0711bab9c465]
+[2016-12-06 11:36:41,010: INFO/MainProcess] Received task: ht_celery.tasks.run_command[d67de02b-96fa-441e-ba2c-95f27e8dfe92]
+[2016-12-06 11:36:41,024: INFO/MainProcess] Received task: ht_celery.tasks.run_command[80941428-e68b-4c83-868a-481774e5bcf4]
+[2016-12-06 11:36:41,043: INFO/MainProcess] Received task: ht_celery.tasks.run_command[7cef67ba-5718-4eed-9332-390faaa558a4]
+[2016-12-06 11:36:42,181: INFO/MainProcess] Received task: ht_celery.tasks.run_command[ac8e7764-a268-469b-8c69-8fc5d8101809] eta:[2016-12-06 03:36:43.075356+00:00]
+[2016-12-06 11:36:42,193: INFO/MainProcess] Received task: ht_celery.tasks.run_command[a1dfc534-b7b0-49de-9726-95722adc22d9] eta:[2016-12-06 03:36:43.110227+00:00]
+[2016-12-06 11:36:42,196: INFO/MainProcess] Received task: ht_celery.tasks.run_command[335f3bb8-a460-4776-8f10-952f7bf44765] eta:[2016-12-06 03:36:43.089877+00:00]
+[2016-12-06 11:36:42,197: INFO/MainProcess] Received task: ht_celery.tasks.run_command[ba612ea7-d3c9-404e-94e3-e79247e4da6c] eta:[2016-12-06 03:36:43.125234+00:00]
+[2016-12-06 11:36:42,200: INFO/MainProcess] Received task: ht_celery.tasks.run_command[aa26a21e-01e6-4408-bfe0-b147b7bc32f5] eta:[2016-12-06 03:36:43.139027+00:00]
+[2016-12-06 11:36:42,243: INFO/MainProcess] Task ht_celery.tasks.run_command[ac8e7764-a268-469b-8c69-8fc5d8101809] retry: Retry in 1s: Exception('Exit at code:', 1)
+[2016-12-06 11:36:42,246: INFO/MainProcess] Task ht_celery.tasks.run_command[a1dfc534-b7b0-49de-9726-95722adc22d9] retry: Retry in 1s: Exception('Exit at code:', 244)
+[2016-12-06 11:36:42,247: INFO/MainProcess] Task ht_celery.tasks.run_command[335f3bb8-a460-4776-8f10-952f7bf44765] retry: Retry in 1s: Exception('Exit at code:', 244)
+[2016-12-06 11:36:42,249: INFO/MainProcess] Task ht_celery.tasks.run_command[ba612ea7-d3c9-404e-94e3-e79247e4da6c] retry: Retry in 1s: Exception('Exit at code:', 1)
+[2016-12-06 11:36:42,251: INFO/MainProcess] Task ht_celery.tasks.run_command[aa26a21e-01e6-4408-bfe0-b147b7bc32f5] retry: Retry in 1s: Exception('Exit at code:', 1)
+[2016-12-06 11:36:43,510: INFO/MainProcess] Received task: ht_celery.tasks.run_command[a1dfc534-b7b0-49de-9726-95722adc22d9] eta:[2016-12-06 03:36:44.458932+00:00]
+[2016-12-06 11:36:43,517: INFO/MainProcess] Received task: ht_celery.tasks.run_command[ac8e7764-a268-469b-8c69-8fc5d8101809] eta:[2016-12-06 03:36:44.448004+00:00]
+[2016-12-06 11:36:43,533: INFO/MainProcess] Task ht_celery.tasks.run_command[ac8e7764-a268-469b-8c69-8fc5d8101809] retry: Retry in 1s: Exception('Exit at code:', 1)
+[2016-12-06 11:36:43,557: INFO/MainProcess] Task ht_celery.tasks.run_command[a1dfc534-b7b0-49de-9726-95722adc22d9] retry: Retry in 1s: Exception('Exit at code:', 1)
+[2016-12-06 11:36:43,563: INFO/MainProcess] Received task: ht_celery.tasks.run_command[ba612ea7-d3c9-404e-94e3-e79247e4da6c] eta:[2016-12-06 03:36:44.549472+00:00]
+[2016-12-06 11:36:43,569: INFO/MainProcess] Task ht_celery.tasks.run_command[ba612ea7-d3c9-404e-94e3-e79247e4da6c] retry: Retry in 1s: Exception('Exit at code:', 244)
+[2016-12-06 11:36:44,024: INFO/MainProcess] Received task: ht_celery.tasks.run_command[335f3bb8-a460-4776-8f10-952f7bf44765] eta:[2016-12-06 03:36:45.006456+00:00]
+[2016-12-06 11:36:44,033: INFO/MainProcess] Task ht_celery.tasks.run_command[335f3bb8-a460-4776-8f10-952f7bf44765] retry: Retry in 1s: Exception('Exit at code:', 1)
+[2016-12-06 11:36:44,788: INFO/MainProcess] Received task: ht_celery.tasks.run_command[ac8e7764-a268-469b-8c69-8fc5d8101809] eta:[2016-12-06 03:36:45.771780+00:00]
+[2016-12-06 11:36:44,795: INFO/MainProcess] Task ht_celery.tasks.run_command[ac8e7764-a268-469b-8c69-8fc5d8101809] retry: Retry in 1s: Exception('Exit at code:', 1)
+[2016-12-06 11:36:45,031: INFO/MainProcess] Task ht_celery.tasks.run_command[da48759c-8c52-4eef-95ec-0711bab9c465] succeeded in 4.028145385993412s: ('', '', 0)
+[2016-12-06 11:36:45,050: INFO/MainProcess] Task ht_celery.tasks.run_command[d67de02b-96fa-441e-ba2c-95f27e8dfe92] succeeded in 4.025585522002075s: ('', '', 0)
+[2016-12-06 11:36:45,052: INFO/MainProcess] Task ht_celery.tasks.run_command[1fb962de-b31c-4d1c-9ed5-60453bc1f086] succeeded in 4.108956734999083s: ('', '', 0)
+[2016-12-06 11:36:45,060: INFO/MainProcess] Task ht_celery.tasks.run_command[9567fb10-5acd-492b-9807-fb5da55fcb42] succeeded in 4.063841502997093s: ('', '', 0)
+[2016-12-06 11:36:45,110: INFO/MainProcess] Received task: ht_celery.tasks.run_command[ba612ea7-d3c9-404e-94e3-e79247e4da6c] eta:[2016-12-06 03:36:46.073624+00:00]
+[2016-12-06 11:36:45,113: INFO/MainProcess] Task ht_celery.tasks.run_command[80941428-e68b-4c83-868a-481774e5bcf4] succeeded in 4.077311697998084s: ('', '', 0)
+[2016-12-06 11:36:45,114: INFO/MainProcess] Task ht_celery.tasks.run_command[ba612ea7-d3c9-404e-94e3-e79247e4da6c] retry: Retry in 1s: Exception('Exit at code:', 1)
+[2016-12-06 11:36:45,172: INFO/MainProcess] Task ht_celery.tasks.run_command[7cef67ba-5718-4eed-9332-390faaa558a4] succeeded in 4.123865934991045s: ('', '', 0)
+[2016-12-06 11:36:45,208: INFO/MainProcess] Received task: ht_celery.tasks.run_command[a1dfc534-b7b0-49de-9726-95722adc22d9] eta:[2016-12-06 03:36:46.191099+00:00]
+[2016-12-06 11:36:45,217: INFO/MainProcess] Task ht_celery.tasks.run_command[a1dfc534-b7b0-49de-9726-95722adc22d9] retry: Retry in 1s: Exception('Exit at code:', 1)
+[2016-12-06 11:36:46,549: INFO/MainProcess] Task ht_celery.tasks.run_command[aa26a21e-01e6-4408-bfe0-b147b7bc32f5] succeeded in 3.4060762689914554s: ('', '', 0)
+[2016-12-06 11:36:46,669: ERROR/MainProcess] Task ht_celery.tasks.run_command[ac8e7764-a268-469b-8c69-8fc5d8101809] raised unexpected: Exception('Exit at code:', 1)
+Traceback (most recent call last):
+  File "/HOME/nscc-gz_jiangli/.virtualenvs/py34env-rh6.5/lib/python3.4/site-packages/celery/app/trace.py", line 240, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/HOME/nscc-gz_jiangli/.virtualenvs/py34env-rh6.5/lib/python3.4/site-packages/celery/app/trace.py", line 438, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/HOME/nscc-gz_jiangli/virtualenv/ht_celery/ht_celery/tasks.py", line 46, in run_command
+    raise self.retry(exc = Exception("Exit at code:" ,retcode) , countdown = 1  , max_retries = 3 )
+  File "/HOME/nscc-gz_jiangli/.virtualenvs/py34env-rh6.5/lib/python3.4/site-packages/celery/app/task.py", line 666, in retry
+    raise exc
+Exception: ('Exit at code:', 1)
+[2016-12-06 11:36:46,924: ERROR/MainProcess] Task ht_celery.tasks.run_command[ba612ea7-d3c9-404e-94e3-e79247e4da6c] raised unexpected: Exception('Exit at code:', 1)
+Traceback (most recent call last):
+  File "/HOME/nscc-gz_jiangli/.virtualenvs/py34env-rh6.5/lib/python3.4/site-packages/celery/app/trace.py", line 240, in trace_task
+    R = retval = fun(*args, **kwargs)
+  File "/HOME/nscc-gz_jiangli/.virtualenvs/py34env-rh6.5/lib/python3.4/site-packages/celery/app/trace.py", line 438, in __protected_call__
+    return self.run(*args, **kwargs)
+  File "/HOME/nscc-gz_jiangli/virtualenv/ht_celery/ht_celery/tasks.py", line 46, in run_command
+    raise self.retry(exc = Exception("Exit at code:" ,retcode) , countdown = 1  , max_retries = 3 )
+  File "/HOME/nscc-gz_jiangli/.virtualenvs/py34env-rh6.5/lib/python3.4/site-packages/celery/app/task.py", line 666, in retry
+    raise exc
+Exception: ('Exit at code:', 1)
+slurmd[cn5834]: *** STEP 3743315.0 CANCELLED AT 2016-12-06T11:36:47 ***
+yhrun: Job step aborted: Waiting up to 2 seconds for job step to finish.
+yhrun: error: cn5834: task 0: Killed
+
+worker: Warm shutdown (MainProcess)
+[2016-12-06 11:36:47,272: ERROR/MainProcess] Process 'Worker-11' pid:7238 exited with 'signal 15 (SIGTERM)'
+[2016-12-06 11:36:47,294: ERROR/MainProcess] Process 'Worker-1' pid:7228 exited with 'signal 15 (SIGTERM)'
+[2016-12-06 11:36:47,316: ERROR/MainProcess] Process 'Worker-24' pid:7251 exited with 'signal 15 (SIGTERM)'
+[2016-12-06 11:36:47,333: ERROR/Worker-14] Connection to Redis lost: Retry (0/20) now.
+[2016-12-06 11:36:47,336: ERROR/Worker-14] Connection to Redis lost: Retry (1/20) in 1.00 second.
+[2016-12-06 11:36:47,338: ERROR/MainProcess] Process 'Worker-9' pid:7236 exited with 'signal 15 (SIGTERM)'
+[2016-12-06 11:36:47,360: ERROR/MainProcess] Process 'Worker-10' pid:7237 exited with 'signal 15 (SIGTERM)'
+[2016-12-06 11:36:47,882: ERROR/MainProcess] Process 'Worker-13' pid:7240 exited with 'signal 15 (SIGTERM)'
+[2016-12-06 11:36:47,903: ERROR/MainProcess] Process 'Worker-18' pid:7245 exited with 'signal 15 (SIGTERM)'
+[2016-12-06 11:36:47,925: ERROR/MainProcess] Process 'Worker-2' pid:7229 exited with 'signal 15 (SIGTERM)'
+[2016-12-06 11:36:47,946: ERROR/MainProcess] Process 'Worker-15' pid:7242 exited with 'signal 15 (SIGTERM)'
+[2016-12-06 11:36:47,968: ERROR/MainProcess] Process 'Worker-21' pid:7248 exited with 'signal 15 (SIGTERM)'
+[2016-12-06 11:36:47,990: ERROR/MainProcess] Process 'Worker-6' pid:7233 exited with 'signal 15 (SIGTERM)'
+[2016-12-06 11:36:48,011: ERROR/MainProcess] Process 'Worker-17' pid:7244 exited with 'signal 15 (SIGTERM)'
+[2016-12-06 11:36:48,033: ERROR/MainProcess] Process 'Worker-3' pid:7230 exited with 'signal 15 (SIGTERM)'
+[2016-12-06 11:36:48,054: ERROR/MainProcess] Process 'Worker-12' pid:7239 exited with 'signal 15 (SIGTERM)'
+[2016-12-06 11:36:48,076: ERROR/MainProcess] Process 'Worker-20' pid:7247 exited with 'signal 15 (SIGTERM)'
+[2016-12-06 11:36:48,097: ERROR/MainProcess] Process 'Worker-4' pid:7231 exited with 'signal 15 (SIGTERM)'
+[2016-12-06 11:36:48,119: ERROR/MainProcess] Process 'Worker-7' pid:7234 exited with 'signal 15 (SIGTERM)'
+[2016-12-06 11:36:48,141: ERROR/MainProcess] Process 'Worker-16' pid:7243 exited with 'signal 15 (SIGTERM)'
+[2016-12-06 11:36:48,162: ERROR/MainProcess] Process 'Worker-23' pid:7250 exited with 'signal 15 (SIGTERM)'
+[2016-12-06 11:36:48,184: ERROR/MainProcess] Process 'Worker-5' pid:7232 exited with 'signal 15 (SIGTERM)'
+[2016-12-06 11:36:48,205: ERROR/MainProcess] Process 'Worker-19' pid:7246 exited with 'signal 15 (SIGTERM)'
+[2016-12-06 11:36:48,227: ERROR/MainProcess] Process 'Worker-22' pid:7249 exited with 'signal 15 (SIGTERM)'
+[2016-12-06 11:36:48,248: ERROR/MainProcess] Process 'Worker-8' pid:7235 exited with 'signal 15 (SIGTERM)'
+[2016-12-06 11:36:48,340: ERROR/Worker-14] Connection to Redis lost: Retry (2/20) in 1.00 second.
+yhrun: error: Timed out waiting for job step to complete

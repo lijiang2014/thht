@@ -1,0 +1,9 @@
+#!/usr/bin/env python
+import os
+EXEC = os.getenv("THHT_EXEC" , None)
+if not EXEC :
+    raise Exception("Error : have not set the exec ! ")
+#EXEC = "/HOME/nscc-gz_jiangli/virtualenv/ht_celery/simtask.py"
+#WDIR = "/HOME/nscc-gz_jiangli/virtualenv/ht_celery"
+INPUT = os.getenv( "THHT_INPUT", "input.htc"  )
+AUTONAME = "True"

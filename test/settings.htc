@@ -1,0 +1,2 @@
+EXEC = /HOME/nscc-gz_jiangli/virtualenv/ht_celery/simtask.py
+INPUT =  input2.htc

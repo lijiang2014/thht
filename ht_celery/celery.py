@@ -4,7 +4,10 @@ import os
 
 from celery import Celery
 
-masterip = os.environ["HT_CELERY_IP"]
+masterip = os.environ["THHT_HOST"]
+thht_port = str( os.getenv( "THHT_PORT", 6379  ) )
+
+masterip = masterip + ':' + thht_port
 
 app = Celery('ht_celery' ,
           broker="redis://" + masterip,
