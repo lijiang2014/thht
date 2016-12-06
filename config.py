@@ -32,6 +32,24 @@ settings = {
         "soft_time_limit" : None , 
     },
 }
+
+def JSONvalue(value , jtype = [ "bool" , "none" , "num" , "str" ] ):
+    val = value.lower()
+    if val in [ "true" , "yes" ] and "bool" in jtype :
+        return True
+    elif val in [ "false" , "no" ] and "bool" in jtype :
+        return False 
+    elif val in [ "none" , "non" , "null"  ] and "none" in jtype :
+        return None 
+    elif val.isdigit() and  "num" in jtype :
+        return int(val)
+    if "str" not in jtype :
+        raise Exception("Error SETTINGS TYPE ." , value )
+    return value
+
+
+
+
 print( sys.argv )
 if len(sys.argv) > 1 :
     ''' read setting from file  '''
@@ -47,19 +65,19 @@ if len(sys.argv) > 1 :
             elif sname in [   "input" ,  "inp" ] :
                 settings["job"]["input"] = svalue
             elif sname in [   "name" ,  "autoname" ] :
-                if svalue.lower() in [ "true" , "yes" , "1"  ] :
-                    settings["job"]["autoname"] = True
-                elif svalue.lower() in [ "false" , "no" , "0"  ] :
-                    settings["job"]["autoname"] = False
+                settings["job"]["autoname"] = JSONvalue( svalue , jtype = [ "bool" ]   )
             elif sname in [   "dir" ,  "workdir" , "autoworkdir" ] :
-                if svalue.lower() in [ "true" , "yes" , "1"  ] :
-                    settings["job"]["autoworkdir"] = True
-                elif svalue.lower() in [ "false" , "no" , "0"  ] :
-                    settings["job"]["autoworkdir"] = False
-            elif sname in settings["queue"].keys() : 
-                settings["queue"][ sname ] = svalue 
+                settings["job"]["autoworkdir"] = JSONvalue( svalue , jtype = [ "bool" ]   )
             else :
-                print( " WARING : NO SUCH SETTING : " , eachLine )
+                snamed = sname.split('.' , 1)
+                if len( snamed ) == 2 :
+                    [ sname_p1 , sname_p2 ] = snamed
+                else :
+                    [ sname_p1 , sname_p2 ] = [ "queue"  ,sname ]
+                if sname_p1 in settings.keys() and sname_p2 in settings[sname_p1 ].keys() :
+                    settings[ sname_p1 ][ sname_p2 ] = JSONvalue( svalue )
+                else :
+                    print( " WARING : NO SUCH SETTING : " , eachLine )
     sf.close()
 else : # No SETTINGS FILE 
     settings["job"]["exec"]  = os.getenv("THHT_EXEC" , None)

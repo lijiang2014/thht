@@ -1,5 +1,5 @@
 from __future__ import absolute_import , unicode_literals
-from ht_celery.celery import app
+from ht_celery.celery import app , settings
 import os
 from subprocess import PIPE, Popen
 import signal
@@ -17,7 +17,7 @@ def xsum(numbers):
     return sum(numbers)
 
 
-@app.task(bind = True , default_retry_delay = 1 , track_started = True , max_retries = 3  )
+@app.task(bind = True , default_retry_delay = settings["queue"]["default_retry_delay"] , track_started = True , max_retries = settings["queue"]["max_retries"]  )
 def run_command( self , command, env=None, timeout=600 , decode ='utf-8' ):
     env_backup = os.environ.copy()
     #for i in os.environ.keys() :
@@ -43,7 +43,6 @@ def run_command( self , command, env=None, timeout=600 , decode ='utf-8' ):
         raise RuntimeError('command "%s", reached deadline and was terminated' % (command))
     if retcode != 0 :  # TO-DO need settings.FLAGS.RETRY.RETCODE
         #logger.warning('command "%s", exit: %d <br> %s' % (command, retcode, error))
-        raise self.retry(exc = Exception("Exit at code:" ,retcode) , countdown = 1  , max_retries = 3 )
-        pass
+        raise self.retry(exc = Exception("Exit at code:" ,retcode)  )
     return (output.decode( decode ), error.decode( decode  ), retcode)
 
