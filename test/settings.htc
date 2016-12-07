@@ -1,4 +1,4 @@
-EXEC = /HOME/nscc-gz_jiangli/virtualenv/ht_celery/simtask.py
+EXEC = /HOME/nscc-gz_jiangli/virtualenv/thht/simtask.py
 INPUT =  input2.htc
 queue.max_retries = 1
 queue.default_retry_delay = 0

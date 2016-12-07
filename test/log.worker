@@ -1,5 +1,0 @@
-slurmd[cn5578]: execve(): celery: No such file or directory
-yhrun: Job step 3746131.0 aborted before step completely launched.
-yhrun: error: cn5578: task 0: Exited with exit code 2
-yhrun: Job step aborted: Waiting up to 2 seconds for job step to finish.
-slurmd[cn5579]: execve(): celery: No such file or directory

@@ -20,9 +20,16 @@ def xsum(numbers):
 @app.task(bind = True , default_retry_delay = settings["queue"]["default_retry_delay"] , track_started = True , max_retries = settings["queue"]["max_retries"]  )
 def run_command( self , command, env=None, timeout=600 , decode ='utf-8' ):
     env_backup = os.environ.copy()
-    #for i in os.environ.keys() :
-    #        os.unsetenv( i )
-    args = [ "bash" , "-c" , "-l" , command ]
+    if settings["job"]["env"] == "bash" : 
+        for i in os.environ.keys() :
+            os.unsetenv( i )
+        args = [ "bash" , "-c" , "-l" , command ]
+    else :
+        env_path = os.getenv("OLD_PATH")
+        env_ld = os.getenv("OLD_LD_LIBRARY_PATH")
+        os.putenv("PATH" , env_path)
+        os.putenv("LD_LIBRARY_PATH" , env_ld)
+        args = [ "bash" , "-c"  , command ]
     try:
         p = Popen(args, stdout=PIPE, stderr=PIPE, env=env)
     except OSError as  ex:
@@ -43,6 +50,6 @@ def run_command( self , command, env=None, timeout=600 , decode ='utf-8' ):
         raise RuntimeError('command "%s", reached deadline and was terminated' % (command))
     if retcode != 0 :  # TO-DO need settings.FLAGS.RETRY.RETCODE
         #logger.warning('command "%s", exit: %d <br> %s' % (command, retcode, error))
-        raise self.retry(exc = Exception("Exit at code:" ,retcode)  )
+        raise self.retry(exc = Exception("Exit at code:"  + str(retcode)  ) )
     return (output.decode( decode ), error.decode( decode  ), retcode)
 

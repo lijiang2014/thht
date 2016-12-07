@@ -21,6 +21,7 @@ settings = {
         "input" : "input.htc" ,
         "autoname" : True ,  # from [ "Auto" , "Set"  ]
         "autoworkdir" :  True ,    # from [ ]
+        "env" : "pass" , # from [ "bash" , "pass" ]
     },
     "queue" : {   # Celery queue task 
         "default_retry_delay" : 1 ,
@@ -60,6 +61,8 @@ if len(sys.argv) > 1 :
         if len( data ) == 2 :
             sname = data[0].strip().lower()
             svalue = data[1].strip()
+            if sname.startswith('#') :
+                continue
             if sname.lower() in [  "exec" ] :
                 settings["job"]["exec"] = svalue
             elif sname in [   "input" ,  "inp" ] :
