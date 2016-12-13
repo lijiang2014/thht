@@ -18,7 +18,7 @@ def xsum(numbers):
 
 
 @app.task(bind = True , autoretry_for=(Exception,) , track_started = True , max_retries = settings["queue"]["max_retries"] , default_retry_delay = 1 )
-def run_command( self , command, env=None, timeout=600  ):
+def run_command( self , command, env=None, timeout=600 , decode ='utf-8' ):
     env_backup = os.environ.copy()
     if settings["job"]["env"] == "bash" : 
         for i in os.environ.keys() :
@@ -43,16 +43,14 @@ def run_command( self , command, env=None, timeout=600  ):
         (output, error) = p.communicate()
         retcode=p.poll()
         signal.alarm(0)  # reset the alarm
-    except Exception as ex :
-        self.retry(exc= ex )
-    #except Alarm:
-    #    #logger.error('command "%s", reached deadline try to terminate' % (command)) 
-    #    # do not need time limit any more as the task have one 
-    #    os.kill(p.pid, signal.SIGKILL)
-    #    raise RuntimeError('command "%s", reached deadline and was terminated' % (command))
-    #if retcode != 0 :  # TO-DO need settings.FLAGS.RETRY.RETCODE
-    #    #logger.warning('command "%s", exit: %d <br> %s' % (command, retcode, error))
-    #    raise self.retry(exc = Exception("Exit at code:"  + str(retcode)  ) )
+    except Alarm:
+        #logger.error('command "%s", reached deadline try to terminate' % (command)) 
+        # do not need time limit any more as the task have one 
+        os.kill(p.pid, signal.SIGKILL)
+        raise RuntimeError('command "%s", reached deadline and was terminated' % (command))
+    if retcode != 0 :  # TO-DO need settings.FLAGS.RETRY.RETCODE
+        #logger.warning('command "%s", exit: %d <br> %s' % (command, retcode, error))
+        raise self.retry(exc = Exception("Exit at code:"  + str(retcode)  ) )
     #return (output.decode( decode ), error.decode( decode  ), retcode)
-    return [ output , error , retcode ]
+    return retcode
 

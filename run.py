@@ -25,4 +25,4 @@ for line in f :
         rest = run_command.delay(cmd )
         results.append(rest)
 rs = ResultSet( results )
-rs.get()
+print( rs.get( propagate = False ) ) 

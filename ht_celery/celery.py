@@ -26,6 +26,7 @@ app = Celery('ht_celery' ,
 
 app.conf.update(
     result_expires = 3600 ,
+    result_serializer = "pickle" , 
 )
 
 if __name__ == '__main__':
