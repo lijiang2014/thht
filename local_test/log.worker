@@ -1,0 +1,26 @@
+[2016-12-13 17:49:26,780: INFO/MainProcess] Connected to redis://localhost:6379//
+[2016-12-13 17:49:26,787: INFO/MainProcess] mingle: searching for neighbors
+[2016-12-13 17:49:27,805: INFO/MainProcess] mingle: all alone
+[2016-12-13 17:49:27,819: INFO/MainProcess] celery@tonge-Dell ready.
+[2016-12-13 17:49:28,081: INFO/MainProcess] Received task: ht_celery.tasks.run_command[49df1a73-1e41-4e46-8198-6835b0df9067]  
+[2016-12-13 17:49:28,084: INFO/MainProcess] Received task: ht_celery.tasks.run_command[600d4888-fd33-46c5-baa5-aeb9ce87cfae]  
+[2016-12-13 17:49:28,087: INFO/MainProcess] Received task: ht_celery.tasks.run_command[222a3c45-414f-4f75-b9c7-617c02d369d3]  
+[2016-12-13 17:49:28,093: INFO/MainProcess] Received task: ht_celery.tasks.run_command[afdf2356-c406-4139-a439-c0a30ad0cffa]  
+[2016-12-13 17:49:28,098: INFO/MainProcess] Received task: ht_celery.tasks.run_command[65dc85d5-a94a-4199-a56e-922c9183224a]  
+[2016-12-13 17:49:28,100: INFO/MainProcess] Received task: ht_celery.tasks.run_command[85f41b24-5bed-4568-b038-4ec9a3e68c7d]  
+[2016-12-13 17:49:28,102: INFO/MainProcess] Received task: ht_celery.tasks.run_command[e496f5f8-6107-42b0-a162-ea72d12a51cc]  
+[2016-12-13 17:49:28,103: INFO/MainProcess] Received task: ht_celery.tasks.run_command[fe49fa82-2ae7-41ca-9269-dc5f8d60bee5]  
+[2016-12-13 17:49:28,104: INFO/MainProcess] Received task: ht_celery.tasks.run_command[18abc3f1-a364-4368-b14a-832e442a5c13]  
+[2016-12-13 17:49:28,106: INFO/MainProcess] Received task: ht_celery.tasks.run_command[b6df900e-fb81-4b0a-a967-96fe4b89098e]  
+[2016-12-13 17:49:28,107: INFO/MainProcess] Received task: ht_celery.tasks.run_command[d729a7cf-5a5b-4194-b587-07e8ca2e69f2]  
+[2016-12-13 17:49:28,135: INFO/PoolWorker-3] Task ht_celery.tasks.run_command[49df1a73-1e41-4e46-8198-6835b0df9067] succeeded in 0.049761782051064074s: [b'', b'', 1]
+[2016-12-13 17:49:28,143: INFO/PoolWorker-1] Task ht_celery.tasks.run_command[222a3c45-414f-4f75-b9c7-617c02d369d3] succeeded in 0.048563453019596636s: [b'', b'', 1]
+[2016-12-13 17:49:28,171: INFO/PoolWorker-1] Task ht_celery.tasks.run_command[85f41b24-5bed-4568-b038-4ec9a3e68c7d] succeeded in 0.027069163043051958s: [b'', b'', 244]
+[2016-12-13 17:49:31,147: INFO/PoolWorker-2] Task ht_celery.tasks.run_command[600d4888-fd33-46c5-baa5-aeb9ce87cfae] succeeded in 3.061252239975147s: [b'', b'', 0]
+[2016-12-13 17:49:31,147: INFO/PoolWorker-4] Task ht_celery.tasks.run_command[afdf2356-c406-4139-a439-c0a30ad0cffa] succeeded in 3.0513052419992164s: [b'', b'', 0]
+[2016-12-13 17:49:31,169: INFO/PoolWorker-3] Task ht_celery.tasks.run_command[65dc85d5-a94a-4199-a56e-922c9183224a] succeeded in 3.032115889945999s: [b'', b'', 0]
+[2016-12-13 17:49:31,183: INFO/PoolWorker-4] Task ht_celery.tasks.run_command[18abc3f1-a364-4368-b14a-832e442a5c13] succeeded in 0.03300981502979994s: [b'', b'', 1]
+[2016-12-13 17:49:31,185: INFO/PoolWorker-2] Task ht_celery.tasks.run_command[fe49fa82-2ae7-41ca-9269-dc5f8d60bee5] succeeded in 0.03536248195450753s: [b'', b'', 1]
+[2016-12-13 17:49:31,205: INFO/PoolWorker-1] Task ht_celery.tasks.run_command[e496f5f8-6107-42b0-a162-ea72d12a51cc] succeeded in 3.0326424760278314s: [b'', b'', 0]
+[2016-12-13 17:49:34,209: INFO/PoolWorker-3] Task ht_celery.tasks.run_command[b6df900e-fb81-4b0a-a967-96fe4b89098e] succeeded in 3.0389545740326867s: [b'', b'', 0]
+[2016-12-13 17:49:34,220: INFO/PoolWorker-4] Task ht_celery.tasks.run_command[d729a7cf-5a5b-4194-b587-07e8ca2e69f2] succeeded in 3.036359322955832s: [b'', b'', 0]

@@ -1,0 +1,11 @@
+ test0  e 0 > output/out.0 2> output/err.0  
+ test1   1 2 3 1 > output/out.1 2> output/err.1  
+ test2   1 2 3 2 > output/out.2 2> output/err.2  
+ test3   1 2 3 3 > output/out.3 2> output/err.3  
+ test4   1 2 3 4 > output/out.4 2> output/err.4  
+ test5   1 2 3 5 > output/out.5 2> output/err.5  
+ test6   1 2 3 6 > output/out.6 2> output/err.6  
+ test7   1 2 3 7 > output/out.7 2> output/err.7  
+ test8   1 2 3 8 > output/out.8 2> output/err.8  
+ test9   1 2 3 9 > output/out.9 2> output/err.9  
+ test10   1 2 3 9 > output/out.10 2> output/err.11

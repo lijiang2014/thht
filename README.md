@@ -7,3 +7,5 @@ time ( cat input.htc  | xargs -i -P 24 ./simtask.py {} )
 cd test 
 
 ./test.sh
+
+# In this local env , u need do some changes , please see the wiki: local test
