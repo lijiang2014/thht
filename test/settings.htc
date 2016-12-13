@@ -1,4 +1,5 @@
-EXEC = /HOME/nscc-gz_jiangli/virtualenv/thht/simtask.py
+EXEC = ./simtask.py
 INPUT =  input2.htc
-queue.max_retries = 1
+queue.max_retries = 2
 queue.default_retry_delay = 0
+#job.env = bash
