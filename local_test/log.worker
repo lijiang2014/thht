@@ -1,0 +1,506 @@
+[2016-12-14 10:12:34,940: WARNING/MainProcess] /home/tonge/WorkStation/virtualenv/py3env/lib/python3.4/site-packages/celery/apps/worker.py:161: CDeprecationWarning: 
+Starting from version 3.2 Celery will refuse to accept pickle by default.
+
+The pickle serializer is a security concern as it may give attackers
+the ability to execute any command.  It's important to secure
+your broker from unauthorized access when using pickle, so we think
+that enabling pickle should require a deliberate action and not be
+the default choice.
+
+If you depend on pickle then you should set a setting to disable this
+warning and to be sure that everything will continue working
+when you upgrade to Celery 3.2::
+
+    CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
+
+You must only enable the serializers that you will actually use.
+
+
+  warnings.warn(CDeprecationWarning(W_PICKLE_DEPRECATED))
+[2016-12-14 10:12:35,034: INFO/MainProcess] Connected to redis://localhost:6379//
+[2016-12-14 10:12:35,042: INFO/MainProcess] mingle: searching for neighbors
+[2016-12-14 10:12:36,047: INFO/MainProcess] mingle: all alone
+[2016-12-14 10:12:36,062: WARNING/MainProcess] celery@tonge-Dell ready.
+[2016-12-14 10:12:36,100: INFO/MainProcess] Received task: ht_celery.tasks.run_command[c63fe51b-5c83-42d1-8d17-50f60be0d2f9]
+[2016-12-14 10:12:36,103: INFO/MainProcess] Received task: ht_celery.tasks.run_command[623504da-e843-4e55-96b6-d8c0ca4655c1]
+[2016-12-14 10:12:36,107: INFO/MainProcess] Received task: ht_celery.tasks.run_command[ed8b9857-cac1-4424-b51e-46eade33b764]
+[2016-12-14 10:12:36,111: INFO/MainProcess] Received task: ht_celery.tasks.run_command[0397f71a-12d4-4a09-a7e7-dca4625ff406]
+[2016-12-14 10:12:36,114: INFO/MainProcess] Received task: ht_celery.tasks.run_command[e345b96f-b8a9-43e3-b7ea-d40e3b026a61]
+[2016-12-14 10:12:36,116: INFO/MainProcess] Received task: ht_celery.tasks.run_command[3a896868-6825-4cbb-b2c6-4670088a0058]
+[2016-12-14 10:12:36,118: INFO/MainProcess] Received task: ht_celery.tasks.run_command[6612b613-4706-4dc1-997a-79c9d4cde578]
+[2016-12-14 10:12:36,119: INFO/MainProcess] Received task: ht_celery.tasks.run_command[c6b339f4-5bde-4dfd-9004-62e5d892e268]
+[2016-12-14 10:12:36,121: INFO/MainProcess] Received task: ht_celery.tasks.run_command[6c9ec3f2-effa-4913-93a7-9d5592f9307a]
+[2016-12-14 10:12:36,122: INFO/MainProcess] Received task: ht_celery.tasks.run_command[6a89c7a2-9be5-41c8-8d5a-88dca776960a]
+[2016-12-14 10:12:36,123: INFO/MainProcess] Received task: ht_celery.tasks.run_command[8607f2f5-c191-46a7-b227-3e7a48767dd9]
+[2016-12-14 10:12:36,125: INFO/MainProcess] Received task: ht_celery.tasks.run_command[dd157760-dc82-4383-aee2-d10aa030b095]
+[2016-12-14 10:12:36,126: INFO/MainProcess] Received task: ht_celery.tasks.run_command[54b9aec7-addf-4730-82b0-1d22020253fc]
+[2016-12-14 10:12:36,127: INFO/MainProcess] Received task: ht_celery.tasks.run_command[27f31710-deda-4f71-aded-d88003de283b]
+[2016-12-14 10:12:36,129: INFO/MainProcess] Received task: ht_celery.tasks.run_command[36fc6e42-edb6-48ac-8744-0e06aa55dbcb]
+[2016-12-14 10:12:36,131: INFO/MainProcess] Received task: ht_celery.tasks.run_command[d4eebd6f-209b-462c-b244-0ddb835e0cee]
+[2016-12-14 10:12:36,132: INFO/MainProcess] Received task: ht_celery.tasks.run_command[38971420-1ad2-476c-a39b-7e9295f4f815]
+[2016-12-14 10:12:36,133: INFO/MainProcess] Received task: ht_celery.tasks.run_command[1f7e8be7-7a66-4fd5-b193-74c0c7ae5e1c]
+[2016-12-14 10:12:36,135: INFO/MainProcess] Received task: ht_celery.tasks.run_command[e0cf5aad-82ed-4272-a30a-ebd0b54a7ae1]
+[2016-12-14 10:12:36,136: INFO/MainProcess] Received task: ht_celery.tasks.run_command[b97c94d0-6258-424b-a66c-60120a4315ce]
+[2016-12-14 10:12:36,154: INFO/MainProcess] Task ht_celery.tasks.run_command[623504da-e843-4e55-96b6-d8c0ca4655c1] succeeded in 0.04982776090037078s: [b'', b'', 1]
+[2016-12-14 10:12:43,916: INFO/MainProcess] Events of group {task} enabled by remote.
+[2016-12-14 10:17:36,159: INFO/MainProcess] Task ht_celery.tasks.run_command[c63fe51b-5c83-42d1-8d17-50f60be0d2f9] succeeded in 300.0549745539902s: [b'', b'', 0]
+[2016-12-14 10:17:36,162: INFO/MainProcess] Received task: ht_celery.tasks.run_command[92a8a867-63c7-479e-b777-e8c1bea20e60]
+[2016-12-14 10:17:36,168: INFO/MainProcess] Received task: ht_celery.tasks.run_command[ed5bb534-92d3-4e4d-a185-2ed6cb34610f]
+[2016-12-14 10:17:36,204: INFO/MainProcess] Task ht_celery.tasks.run_command[ed8b9857-cac1-4424-b51e-46eade33b764] succeeded in 300.091989328037s: [b'', b'', 0]
+[2016-12-14 10:17:36,209: INFO/MainProcess] Received task: ht_celery.tasks.run_command[745d1a66-4fe0-4220-8656-1caf16844816]
+[2016-12-14 10:17:36,266: INFO/MainProcess] Task ht_celery.tasks.run_command[0397f71a-12d4-4a09-a7e7-dca4625ff406] succeeded in 300.1531754299067s: [b'', b'', 0]
+[2016-12-14 10:17:36,269: INFO/MainProcess] Received task: ht_celery.tasks.run_command[13f260c7-8dfa-4911-beea-31626bb7ef05]
+[2016-12-14 10:22:36,256: INFO/MainProcess] Task ht_celery.tasks.run_command[3a896868-6825-4cbb-b2c6-4670088a0058] succeeded in 300.093602775014s: [b'', b'', 0]
+[2016-12-14 10:22:36,295: INFO/MainProcess] Task ht_celery.tasks.run_command[e345b96f-b8a9-43e3-b7ea-d40e3b026a61] succeeded in 300.13501687697135s: [b'', b'', 0]
+[2016-12-14 10:22:36,302: INFO/MainProcess] Received task: ht_celery.tasks.run_command[5643d74c-5126-4690-aa1e-12ceec72d93d]
+[2016-12-14 10:22:36,304: INFO/MainProcess] Received task: ht_celery.tasks.run_command[8a0245b1-27dd-487e-ad6b-104d7e5fc71a]
+[2016-12-14 10:22:36,331: INFO/MainProcess] Task ht_celery.tasks.run_command[6a89c7a2-9be5-41c8-8d5a-88dca776960a] succeeded in 0.03199239796958864s: [b'', b'', 244]
+[2016-12-14 10:22:36,334: INFO/MainProcess] Task ht_celery.tasks.run_command[6612b613-4706-4dc1-997a-79c9d4cde578] succeeded in 300.1288629460614s: [b'', b'', 0]
+[2016-12-14 10:22:36,336: INFO/MainProcess] Received task: ht_celery.tasks.run_command[a2045307-ca8f-434c-86d6-95a8ad5f5a29]
+[2016-12-14 10:22:36,394: INFO/MainProcess] Task ht_celery.tasks.run_command[c6b339f4-5bde-4dfd-9004-62e5d892e268] succeeded in 300.1264262299519s: [b'', b'', 0]
+[2016-12-14 10:22:36,396: INFO/MainProcess] Received task: ht_celery.tasks.run_command[ecf8dc54-026c-4d2e-84f2-d8f99738b46f]
+[2016-12-14 10:22:36,419: INFO/MainProcess] Task ht_celery.tasks.run_command[dd157760-dc82-4383-aee2-d10aa030b095] succeeded in 0.02514301403425634s: [b'', b'', 1]
+[2016-12-14 10:22:36,421: INFO/MainProcess] Received task: ht_celery.tasks.run_command[7a31a36c-1c6f-4ae7-9909-f6586f4e5e5c]
+[2016-12-14 10:27:36,387: INFO/MainProcess] Task ht_celery.tasks.run_command[8607f2f5-c191-46a7-b227-3e7a48767dd9] succeeded in 300.052920561051s: [b'', b'', 0]
+[2016-12-14 10:27:36,390: INFO/MainProcess] Received task: ht_celery.tasks.run_command[ab0975bd-1bc9-4cae-8eeb-784f782a5644]
+[2016-12-14 10:27:36,420: INFO/MainProcess] Task ht_celery.tasks.run_command[6c9ec3f2-effa-4913-93a7-9d5592f9307a] succeeded in 300.12572298699524s: [b'', b'', 0]
+[2016-12-14 10:27:36,427: INFO/MainProcess] Received task: ht_celery.tasks.run_command[b1a9f14f-f061-4530-b730-d45795334fdc]
+[2016-12-14 10:27:36,433: INFO/MainProcess] Received task: ht_celery.tasks.run_command[996d3416-b257-4e1b-8b36-8eeaf5e8cef1]
+[2016-12-14 10:27:36,453: INFO/MainProcess] Task ht_celery.tasks.run_command[54b9aec7-addf-4730-82b0-1d22020253fc] succeeded in 0.03335006406996399s: [b'', b'', 1]
+[2016-12-14 10:27:36,457: INFO/MainProcess] Received task: ht_celery.tasks.run_command[05feef57-577b-4d9b-a5e4-85c418579005]
+[2016-12-14 10:27:36,544: INFO/MainProcess] Task ht_celery.tasks.run_command[27f31710-deda-4f71-aded-d88003de283b] succeeded in 300.12345746101346s: [b'', b'', 0]
+[2016-12-14 10:27:36,546: INFO/MainProcess] Received task: ht_celery.tasks.run_command[368f3837-8c69-4be6-bb31-dc6ccd0d63c1]
+[2016-12-14 10:32:36,538: INFO/MainProcess] Task ht_celery.tasks.run_command[36fc6e42-edb6-48ac-8744-0e06aa55dbcb] succeeded in 300.1490153239574s: [b'', b'', 0]
+[2016-12-14 10:32:36,543: INFO/MainProcess] Received task: ht_celery.tasks.run_command[2f333fcc-6c4e-4b2b-88f7-e45a22a1e8b1]
+[2016-12-14 10:32:36,545: INFO/MainProcess] Task ht_celery.tasks.run_command[d4eebd6f-209b-462c-b244-0ddb835e0cee] succeeded in 300.122721377993s: [b'', b'', 0]
+[2016-12-14 10:32:36,547: INFO/MainProcess] Received task: ht_celery.tasks.run_command[a283f848-896a-4f14-a3d5-e582aebce830]
+[2016-12-14 10:32:36,587: INFO/MainProcess] Task ht_celery.tasks.run_command[38971420-1ad2-476c-a39b-7e9295f4f815] succeeded in 300.13230805506464s: [b'', b'', 0]
+[2016-12-14 10:32:36,591: INFO/MainProcess] Received task: ht_celery.tasks.run_command[a005ddf5-c996-4522-86e7-66b85eaf7ced]
+[2016-12-14 10:32:36,676: INFO/MainProcess] Task ht_celery.tasks.run_command[1f7e8be7-7a66-4fd5-b193-74c0c7ae5e1c] succeeded in 300.1310138780391s: [b'', b'', 0]
+[2016-12-14 10:32:36,678: INFO/MainProcess] Received task: ht_celery.tasks.run_command[0b95835c-77f7-4936-8779-408aca4acf38]
+[2016-12-14 10:32:36,706: INFO/MainProcess] Task ht_celery.tasks.run_command[ed5bb534-92d3-4e4d-a185-2ed6cb34610f] succeeded in 0.029025865020230412s: [b'', b'', 1]
+[2016-12-14 10:37:36,616: INFO/MainProcess] Task ht_celery.tasks.run_command[b97c94d0-6258-424b-a66c-60120a4315ce] succeeded in 300.0697051960742s: [b'', b'', 0]
+[2016-12-14 10:37:36,618: INFO/MainProcess] Received task: ht_celery.tasks.run_command[57e49a88-8e59-4ffb-9ae0-a9cad20cd14d]
+[2016-12-14 10:37:36,645: INFO/MainProcess] Task ht_celery.tasks.run_command[13f260c7-8dfa-4911-beea-31626bb7ef05] succeeded in 0.028463248978368938s: [b'', b'', 1]
+[2016-12-14 10:37:36,675: INFO/MainProcess] Task ht_celery.tasks.run_command[e0cf5aad-82ed-4272-a30a-ebd0b54a7ae1] succeeded in 300.134801369044s: [b'', b'', 0]
+[2016-12-14 10:37:36,678: INFO/MainProcess] Received task: ht_celery.tasks.run_command[eb0183e4-e396-4062-9503-c23297e37d5e]
+[2016-12-14 10:37:36,680: INFO/MainProcess] Received task: ht_celery.tasks.run_command[e5b5ce47-d76b-4b13-a8c8-4b8e1cae5ecb]
+[2016-12-14 10:37:36,713: INFO/MainProcess] Task ht_celery.tasks.run_command[92a8a867-63c7-479e-b777-e8c1bea20e60] succeeded in 300.12404397001956s: [b'', b'', 0]
+[2016-12-14 10:37:36,715: INFO/MainProcess] Received task: ht_celery.tasks.run_command[dab1040a-655d-4b74-a610-3cd66cba22d4]
+[2016-12-14 10:42:36,783: INFO/MainProcess] Task ht_celery.tasks.run_command[745d1a66-4fe0-4220-8656-1caf16844816] succeeded in 300.10837895795703s: [b'', b'', 0]
+[2016-12-14 10:42:36,784: INFO/MainProcess] Task ht_celery.tasks.run_command[5643d74c-5126-4690-aa1e-12ceec72d93d] succeeded in 300.07110752002336s: [b'', b'', 0]
+[2016-12-14 10:42:36,787: INFO/MainProcess] Received task: ht_celery.tasks.run_command[c0bff592-cd11-4b05-8bc0-0fc9cb03c80b]
+[2016-12-14 10:42:36,790: INFO/MainProcess] Received task: ht_celery.tasks.run_command[4c627b47-b9a2-480f-88b8-e43720eb8d1f]
+[2016-12-14 10:42:36,795: INFO/MainProcess] Received task: ht_celery.tasks.run_command[6d0ff7e8-ae19-4b91-9fd2-05add8776a77]
+[2016-12-14 10:42:36,813: INFO/MainProcess] Task ht_celery.tasks.run_command[8a0245b1-27dd-487e-ad6b-104d7e5fc71a] succeeded in 300.136012245086s: [b'', b'', 0]
+[2016-12-14 10:42:36,820: INFO/MainProcess] Received task: ht_celery.tasks.run_command[11631d0b-0783-4c95-94e1-2cae3a15ceac]
+[2016-12-14 10:42:36,827: INFO/MainProcess] Task ht_celery.tasks.run_command[a2045307-ca8f-434c-86d6-95a8ad5f5a29] succeeded in 0.04446906398516148s: [b'', b'', 244]
+[2016-12-14 10:42:36,831: INFO/MainProcess] Received task: ht_celery.tasks.run_command[d34581ab-4ac6-4f70-bb96-edfc4892f85a]
+[2016-12-14 10:47:36,875: INFO/MainProcess] Task ht_celery.tasks.run_command[ab0975bd-1bc9-4cae-8eeb-784f782a5644] succeeded in 300.0595953640295s: [b'', b'', 0]
+[2016-12-14 10:47:36,923: INFO/MainProcess] Task ht_celery.tasks.run_command[b1a9f14f-f061-4530-b730-d45795334fdc] succeeded in 300.09371880290564s: [b'', b'', 0]
+[2016-12-14 10:47:36,925: INFO/MainProcess] Task ht_celery.tasks.run_command[ecf8dc54-026c-4d2e-84f2-d8f99738b46f] succeeded in 300.13836834195536s: [b'', b'', 0]
+[2016-12-14 10:47:36,929: INFO/MainProcess] Received task: ht_celery.tasks.run_command[24287e12-98c5-41c6-b7c6-e3383e7e4938]
+[2016-12-14 10:47:36,933: INFO/MainProcess] Received task: ht_celery.tasks.run_command[66a69fb1-808a-4254-a32c-fddaed51da4b]
+[2016-12-14 10:47:36,936: INFO/MainProcess] Task ht_celery.tasks.run_command[7a31a36c-1c6f-4ae7-9909-f6586f4e5e5c] succeeded in 300.1494437670335s: [b'', b'', 0]
+[2016-12-14 10:47:36,945: INFO/MainProcess] Received task: ht_celery.tasks.run_command[d7306e9c-2457-42d1-972d-6120612bfcf1]
+[2016-12-14 10:47:36,948: INFO/MainProcess] Received task: ht_celery.tasks.run_command[c4c4790a-b10a-410c-9f63-e54a25881b12]
+[2016-12-14 10:47:36,970: INFO/MainProcess] Task ht_celery.tasks.run_command[996d3416-b257-4e1b-8b36-8eeaf5e8cef1] succeeded in 0.04738248698413372s: [b'', b'', 1]
+[2016-12-14 10:47:36,978: INFO/MainProcess] Task ht_celery.tasks.run_command[368f3837-8c69-4be6-bb31-dc6ccd0d63c1] succeeded in 0.05085230595432222s: [b'', b'', 1]
+[2016-12-14 10:47:36,980: INFO/MainProcess] Received task: ht_celery.tasks.run_command[8e28892a-f84f-46dd-ac25-2618c4a5b8a3]
+[2016-12-14 10:47:36,990: INFO/MainProcess] Task ht_celery.tasks.run_command[2f333fcc-6c4e-4b2b-88f7-e45a22a1e8b1] succeeded in 0.05081704701296985s: [b'', b'', 1]
+[2016-12-14 10:47:36,993: INFO/MainProcess] Received task: ht_celery.tasks.run_command[79fae015-fefb-4aa0-b409-fd789fcefbd0]
+[2016-12-14 10:52:37,058: INFO/MainProcess] Task ht_celery.tasks.run_command[0b95835c-77f7-4936-8779-408aca4acf38] succeeded in 300.0670214170823s: [b'', b'', 0]
+[2016-12-14 10:52:37,061: INFO/MainProcess] Received task: ht_celery.tasks.run_command[b8365228-0d35-4076-805f-69c24928c372]
+[2016-12-14 10:52:37,063: INFO/MainProcess] Task ht_celery.tasks.run_command[05feef57-577b-4d9b-a5e4-85c418579005] succeeded in 300.131099380902s: [b'', b'', 0]
+[2016-12-14 10:52:37,067: INFO/MainProcess] Received task: ht_celery.tasks.run_command[e71f7aa0-8d32-4ba6-ae36-dcdcff4c99f7]
+[2016-12-14 10:52:37,096: INFO/MainProcess] Task ht_celery.tasks.run_command[a005ddf5-c996-4522-86e7-66b85eaf7ced] succeeded in 0.0352247100090608s: [b'', b'', 1]
+[2016-12-14 10:52:37,099: INFO/MainProcess] Received task: ht_celery.tasks.run_command[e9d2ca12-5b82-405d-b221-019b88cdf497]
+[2016-12-14 10:52:37,111: INFO/MainProcess] Task ht_celery.tasks.run_command[a283f848-896a-4f14-a3d5-e582aebce830] succeeded in 300.1387533780653s: [b'', b'', 0]
+[2016-12-14 10:52:37,117: INFO/MainProcess] Received task: ht_celery.tasks.run_command[2abb7d0b-f0a5-4aec-ba45-e47e4cb979e0]
+[2016-12-14 10:52:37,120: INFO/MainProcess] Received task: ht_celery.tasks.run_command[ddde82f2-2533-4e50-b954-9e9513f1c531]
+[2016-12-14 10:52:37,146: INFO/MainProcess] Task ht_celery.tasks.run_command[dab1040a-655d-4b74-a610-3cd66cba22d4] succeeded in 0.033509275992400944s: [b'', b'', 1]
+[2016-12-14 10:54:05,570: CRITICAL/MainProcess] Could not restore message: {'body': 'W1siLi9zaW10YXNrLnB5ICAgMSAyIDMgOSA+IG91dHB1dC9vdXQuMTAgMj4gb3V0cHV0L2Vyci4xMSJdLCB7fSwgeyJlcnJiYWNrcyI6IG51bGwsICJjaG9yZCI6IG51bGwsICJjYWxsYmFja3MiOiBudWxsLCAiY2hhaW4iOiBudWxsfV0=', 'content-type': 'application/json', 'content-encoding': 'utf-8', 'properties': {'body_encoding': 'base64', 'delivery_tag': 'ce57a885-0efa-4083-8d6d-3d11be05476c', 'correlation_id': '7128843e-227e-409e-8175-b9fa6357cc34', 'delivery_info': {'routing_key': 'celery', 'exchange': ''}, 'reply_to': '625550b5-4645-3a09-9905-a9de66b29336', 'priority': 0, 'delivery_mode': 2}, 'headers': {'id': '7128843e-227e-409e-8175-b9fa6357cc34', 'parent_id': None, 'timelimit': [None, None], 'group': None, 'argsrepr': "('./simtask.py   1 2 3 9 > output/out.10 2> output/err.11',)", 'origin': 'gen25284@tonge-Dell', 'kwargsrepr': '{}', 'task': 'ht_celery.tasks.run_command', 'redelivered': True, 'expires': None, 'eta': None, 'lang': 'py', 'retries': 0, 'root_id': '7128843e-227e-409e-8175-b9fa6357cc34'}}
+Traceback (most recent call last):
+  File "/home/tonge/WorkStation/virtualenv/py3env/lib/python3.4/site-packages/kombu/transport/redis.py", line 508, in _do_restore_message
+    for queue in self._lookup(exchange, routing_key):
+  File "/home/tonge/WorkStation/virtualenv/py3env/lib/python3.4/site-packages/kombu/transport/virtual/__init__.py", line 612, in _lookup
+    self.get_table(exchange),
+  File "/home/tonge/WorkStation/virtualenv/py3env/lib/python3.4/site-packages/kombu/transport/redis.py", line 760, in get_table
+    raise InconsistencyError(NO_ROUTE_ERROR.format(exchange, key))
+kombu.exceptions.InconsistencyError: 
+Cannot route message for exchange '': Table empty or key no longer exists.
+Probably the key ('_kombu.binding.') has been removed from the Redis database.
+
+[2016-12-14 10:54:05,573: CRITICAL/MainProcess] Could not restore message: {'body': 'W1siLi9zaW10YXNrLnB5ICAgMSAyIDMgOSA+IG91dHB1dC9vdXQuMTAgMj4gb3V0cHV0L2Vyci4xMSJdLCB7fSwgeyJjaGFpbiI6IG51bGwsICJjaG9yZCI6IG51bGwsICJlcnJiYWNrcyI6IG51bGwsICJjYWxsYmFja3MiOiBudWxsfV0=', 'properties': {'body_encoding': 'base64', 'delivery_tag': '1db65f74-1248-4a74-926a-a37dace1a277', 'correlation_id': 'b5255fb2-15fd-4226-8c4e-d40ea9c3b5ad', 'delivery_info': {'routing_key': 'celery', 'exchange': ''}, 'reply_to': 'c9863f91-761f-3f04-bac7-b1ca9498b42b', 'priority': 0, 'delivery_mode': 2}, 'content-encoding': 'utf-8', 'content-type': 'application/json', 'headers': {'id': 'b5255fb2-15fd-4226-8c4e-d40ea9c3b5ad', 'kwargsrepr': '{}', 'timelimit': [None, None], 'group': None, 'argsrepr': "('./simtask.py   1 2 3 9 > output/out.10 2> output/err.11',)", 'lang': 'py', 'parent_id': None, 'task': 'ht_celery.tasks.run_command', 'redelivered': True, 'expires': None, 'eta': None, 'origin': 'gen25233@tonge-Dell', 'retries': 0, 'root_id': 'b5255fb2-15fd-4226-8c4e-d40ea9c3b5ad'}}
+Traceback (most recent call last):
+  File "/home/tonge/WorkStation/virtualenv/py3env/lib/python3.4/site-packages/kombu/transport/redis.py", line 508, in _do_restore_message
+    for queue in self._lookup(exchange, routing_key):
+  File "/home/tonge/WorkStation/virtualenv/py3env/lib/python3.4/site-packages/kombu/transport/virtual/__init__.py", line 612, in _lookup
+    self.get_table(exchange),
+  File "/home/tonge/WorkStation/virtualenv/py3env/lib/python3.4/site-packages/kombu/transport/redis.py", line 760, in get_table
+    raise InconsistencyError(NO_ROUTE_ERROR.format(exchange, key))
+kombu.exceptions.InconsistencyError: 
+Cannot route message for exchange '': Table empty or key no longer exists.
+Probably the key ('_kombu.binding.') has been removed from the Redis database.
+
+[2016-12-14 10:54:05,575: CRITICAL/MainProcess] Could not restore message: {'body': 'W1siLi9zaW10YXNrLnB5ICAgMSAyIDMgOSA+IG91dHB1dC9vdXQuOSAyPiBvdXRwdXQvZXJyLjkiXSwge30sIHsiY2hhaW4iOiBudWxsLCAiY2hvcmQiOiBudWxsLCAiZXJyYmFja3MiOiBudWxsLCAiY2FsbGJhY2tzIjogbnVsbH1d', 'properties': {'body_encoding': 'base64', 'delivery_tag': '366802fa-6134-4f56-99c0-25986fff3f3b', 'correlation_id': '0969b665-42a7-4495-83e6-ca249ce2a6d7', 'delivery_info': {'routing_key': 'celery', 'exchange': ''}, 'reply_to': 'c9863f91-761f-3f04-bac7-b1ca9498b42b', 'priority': 0, 'delivery_mode': 2}, 'content-encoding': 'utf-8', 'content-type': 'application/json', 'headers': {'id': '0969b665-42a7-4495-83e6-ca249ce2a6d7', 'kwargsrepr': '{}', 'timelimit': [None, None], 'group': None, 'argsrepr': "('./simtask.py   1 2 3 9 > output/out.9 2> output/err.9',)", 'lang': 'py', 'parent_id': None, 'task': 'ht_celery.tasks.run_command', 'redelivered': True, 'expires': None, 'eta': None, 'origin': 'gen25233@tonge-Dell', 'retries': 0, 'root_id': '0969b665-42a7-4495-83e6-ca249ce2a6d7'}}
+Traceback (most recent call last):
+  File "/home/tonge/WorkStation/virtualenv/py3env/lib/python3.4/site-packages/kombu/transport/redis.py", line 508, in _do_restore_message
+    for queue in self._lookup(exchange, routing_key):
+  File "/home/tonge/WorkStation/virtualenv/py3env/lib/python3.4/site-packages/kombu/transport/virtual/__init__.py", line 612, in _lookup
+    self.get_table(exchange),
+  File "/home/tonge/WorkStation/virtualenv/py3env/lib/python3.4/site-packages/kombu/transport/redis.py", line 760, in get_table
+    raise InconsistencyError(NO_ROUTE_ERROR.format(exchange, key))
+kombu.exceptions.InconsistencyError: 
+Cannot route message for exchange '': Table empty or key no longer exists.
+Probably the key ('_kombu.binding.') has been removed from the Redis database.
+
+[2016-12-14 10:54:05,577: CRITICAL/MainProcess] Could not restore message: {'body': 'W1siLi9zaW10YXNrLnB5ICAgMSAyIDMgOCA+IG91dHB1dC9vdXQuOCAyPiBvdXRwdXQvZXJyLjgiXSwge30sIHsiY2hhaW4iOiBudWxsLCAiY2hvcmQiOiBudWxsLCAiZXJyYmFja3MiOiBudWxsLCAiY2FsbGJhY2tzIjogbnVsbH1d', 'properties': {'body_encoding': 'base64', 'delivery_tag': 'a24ea6d5-9505-42ff-9707-d2faaa5364d0', 'correlation_id': '0698cb62-5299-492d-a296-589358823311', 'delivery_info': {'routing_key': 'celery', 'exchange': ''}, 'reply_to': 'c9863f91-761f-3f04-bac7-b1ca9498b42b', 'priority': 0, 'delivery_mode': 2}, 'content-encoding': 'utf-8', 'content-type': 'application/json', 'headers': {'id': '0698cb62-5299-492d-a296-589358823311', 'kwargsrepr': '{}', 'timelimit': [None, None], 'group': None, 'argsrepr': "('./simtask.py   1 2 3 8 > output/out.8 2> output/err.8',)", 'lang': 'py', 'parent_id': None, 'task': 'ht_celery.tasks.run_command', 'redelivered': True, 'expires': None, 'eta': None, 'origin': 'gen25233@tonge-Dell', 'retries': 0, 'root_id': '0698cb62-5299-492d-a296-589358823311'}}
+Traceback (most recent call last):
+  File "/home/tonge/WorkStation/virtualenv/py3env/lib/python3.4/site-packages/kombu/transport/redis.py", line 508, in _do_restore_message
+    for queue in self._lookup(exchange, routing_key):
+  File "/home/tonge/WorkStation/virtualenv/py3env/lib/python3.4/site-packages/kombu/transport/virtual/__init__.py", line 612, in _lookup
+    self.get_table(exchange),
+  File "/home/tonge/WorkStation/virtualenv/py3env/lib/python3.4/site-packages/kombu/transport/redis.py", line 760, in get_table
+    raise InconsistencyError(NO_ROUTE_ERROR.format(exchange, key))
+kombu.exceptions.InconsistencyError: 
+Cannot route message for exchange '': Table empty or key no longer exists.
+Probably the key ('_kombu.binding.') has been removed from the Redis database.
+
+[2016-12-14 10:54:05,579: CRITICAL/MainProcess] Could not restore message: {'body': 'W1siLi9zaW10YXNrLnB5ICAgMSAyIDMgNyA+IG91dHB1dC9vdXQuNyAyPiBvdXRwdXQvZXJyLjciXSwge30sIHsiY2hhaW4iOiBudWxsLCAiY2hvcmQiOiBudWxsLCAiZXJyYmFja3MiOiBudWxsLCAiY2FsbGJhY2tzIjogbnVsbH1d', 'properties': {'body_encoding': 'base64', 'delivery_tag': '31169bd9-1133-49d4-b543-b26c900d79c9', 'correlation_id': 'd2f0bade-9385-4430-8411-4cf0104de317', 'delivery_info': {'routing_key': 'celery', 'exchange': ''}, 'reply_to': 'c9863f91-761f-3f04-bac7-b1ca9498b42b', 'priority': 0, 'delivery_mode': 2}, 'content-encoding': 'utf-8', 'content-type': 'application/json', 'headers': {'id': 'd2f0bade-9385-4430-8411-4cf0104de317', 'kwargsrepr': '{}', 'timelimit': [None, None], 'group': None, 'argsrepr': "('./simtask.py   1 2 3 7 > output/out.7 2> output/err.7',)", 'lang': 'py', 'parent_id': None, 'task': 'ht_celery.tasks.run_command', 'redelivered': True, 'expires': None, 'eta': None, 'origin': 'gen25233@tonge-Dell', 'retries': 0, 'root_id': 'd2f0bade-9385-4430-8411-4cf0104de317'}}
+Traceback (most recent call last):
+  File "/home/tonge/WorkStation/virtualenv/py3env/lib/python3.4/site-packages/kombu/transport/redis.py", line 508, in _do_restore_message
+    for queue in self._lookup(exchange, routing_key):
+  File "/home/tonge/WorkStation/virtualenv/py3env/lib/python3.4/site-packages/kombu/transport/virtual/__init__.py", line 612, in _lookup
+    self.get_table(exchange),
+  File "/home/tonge/WorkStation/virtualenv/py3env/lib/python3.4/site-packages/kombu/transport/redis.py", line 760, in get_table
+    raise InconsistencyError(NO_ROUTE_ERROR.format(exchange, key))
+kombu.exceptions.InconsistencyError: 
+Cannot route message for exchange '': Table empty or key no longer exists.
+Probably the key ('_kombu.binding.') has been removed from the Redis database.
+
+[2016-12-14 10:54:05,580: CRITICAL/MainProcess] Could not restore message: {'body': 'W1siLi9zaW10YXNrLnB5ICAgMSAyIDMgNiA+IG91dHB1dC9vdXQuNiAyPiBvdXRwdXQvZXJyLjYiXSwge30sIHsiY2hhaW4iOiBudWxsLCAiY2hvcmQiOiBudWxsLCAiZXJyYmFja3MiOiBudWxsLCAiY2FsbGJhY2tzIjogbnVsbH1d', 'properties': {'body_encoding': 'base64', 'delivery_tag': 'fc6badc5-4fbf-41f2-bce5-40032ab8e654', 'correlation_id': '5470ee11-5467-4b88-8908-ddcb2c7be6e4', 'delivery_info': {'routing_key': 'celery', 'exchange': ''}, 'reply_to': 'c9863f91-761f-3f04-bac7-b1ca9498b42b', 'priority': 0, 'delivery_mode': 2}, 'content-encoding': 'utf-8', 'content-type': 'application/json', 'headers': {'id': '5470ee11-5467-4b88-8908-ddcb2c7be6e4', 'kwargsrepr': '{}', 'timelimit': [None, None], 'group': None, 'argsrepr': "('./simtask.py   1 2 3 6 > output/out.6 2> output/err.6',)", 'lang': 'py', 'parent_id': None, 'task': 'ht_celery.tasks.run_command', 'redelivered': True, 'expires': None, 'eta': None, 'origin': 'gen25233@tonge-Dell', 'retries': 0, 'root_id': '5470ee11-5467-4b88-8908-ddcb2c7be6e4'}}
+Traceback (most recent call last):
+  File "/home/tonge/WorkStation/virtualenv/py3env/lib/python3.4/site-packages/kombu/transport/redis.py", line 508, in _do_restore_message
+    for queue in self._lookup(exchange, routing_key):
+  File "/home/tonge/WorkStation/virtualenv/py3env/lib/python3.4/site-packages/kombu/transport/virtual/__init__.py", line 612, in _lookup
+    self.get_table(exchange),
+  File "/home/tonge/WorkStation/virtualenv/py3env/lib/python3.4/site-packages/kombu/transport/redis.py", line 760, in get_table
+    raise InconsistencyError(NO_ROUTE_ERROR.format(exchange, key))
+kombu.exceptions.InconsistencyError: 
+Cannot route message for exchange '': Table empty or key no longer exists.
+Probably the key ('_kombu.binding.') has been removed from the Redis database.
+
+[2016-12-14 10:54:05,581: CRITICAL/MainProcess] Could not restore message: {'body': 'W1siLi9zaW10YXNrLnB5ICAgMSAyIDMgNSA+IG91dHB1dC9vdXQuNSAyPiBvdXRwdXQvZXJyLjUiXSwge30sIHsiY2hhaW4iOiBudWxsLCAiY2hvcmQiOiBudWxsLCAiZXJyYmFja3MiOiBudWxsLCAiY2FsbGJhY2tzIjogbnVsbH1d', 'properties': {'body_encoding': 'base64', 'delivery_tag': '28d03f96-252c-484a-a72a-1d2e17a661ac', 'correlation_id': 'c78ff500-28a5-4508-8f54-9dcb80b79d66', 'delivery_info': {'routing_key': 'celery', 'exchange': ''}, 'reply_to': 'c9863f91-761f-3f04-bac7-b1ca9498b42b', 'priority': 0, 'delivery_mode': 2}, 'content-encoding': 'utf-8', 'content-type': 'application/json', 'headers': {'id': 'c78ff500-28a5-4508-8f54-9dcb80b79d66', 'kwargsrepr': '{}', 'timelimit': [None, None], 'group': None, 'argsrepr': "('./simtask.py   1 2 3 5 > output/out.5 2> output/err.5',)", 'lang': 'py', 'parent_id': None, 'task': 'ht_celery.tasks.run_command', 'redelivered': True, 'expires': None, 'eta': None, 'origin': 'gen25233@tonge-Dell', 'retries': 0, 'root_id': 'c78ff500-28a5-4508-8f54-9dcb80b79d66'}}
+Traceback (most recent call last):
+  File "/home/tonge/WorkStation/virtualenv/py3env/lib/python3.4/site-packages/kombu/transport/redis.py", line 508, in _do_restore_message
+    for queue in self._lookup(exchange, routing_key):
+  File "/home/tonge/WorkStation/virtualenv/py3env/lib/python3.4/site-packages/kombu/transport/virtual/__init__.py", line 612, in _lookup
+    self.get_table(exchange),
+  File "/home/tonge/WorkStation/virtualenv/py3env/lib/python3.4/site-packages/kombu/transport/redis.py", line 760, in get_table
+    raise InconsistencyError(NO_ROUTE_ERROR.format(exchange, key))
+kombu.exceptions.InconsistencyError: 
+Cannot route message for exchange '': Table empty or key no longer exists.
+Probably the key ('_kombu.binding.') has been removed from the Redis database.
+
+[2016-12-14 10:57:37,165: INFO/MainProcess] Task ht_celery.tasks.run_command[57e49a88-8e59-4ffb-9ae0-a9cad20cd14d] succeeded in 300.10476890497375s: [b'', b'', 0]
+[2016-12-14 10:57:37,168: INFO/MainProcess] Received task: ht_celery.tasks.run_command[f47b993b-5656-45ad-b3a5-23d0fa56dff3]
+[2016-12-14 10:57:37,221: INFO/MainProcess] Task ht_celery.tasks.run_command[e5b5ce47-d76b-4b13-a8c8-4b8e1cae5ecb] succeeded in 300.1223902829224s: [b'', b'', 0]
+[2016-12-14 10:57:37,223: INFO/MainProcess] Task ht_celery.tasks.run_command[eb0183e4-e396-4062-9503-c23297e37d5e] succeeded in 300.11189470195677s: [b'', b'', 0]
+[2016-12-14 10:57:37,229: INFO/MainProcess] Received task: ht_celery.tasks.run_command[ceb58bf4-7a57-4868-8225-d098a162a0a9]
+[2016-12-14 10:57:37,231: INFO/MainProcess] Received task: ht_celery.tasks.run_command[6b854cb0-2889-4df4-8696-7b961ee08af2]
+[2016-12-14 10:57:37,233: INFO/MainProcess] Received task: ht_celery.tasks.run_command[f5a2d782-e5f4-49b4-b7b6-8e55bdbf7d61]
+[2016-12-14 10:57:37,268: INFO/MainProcess] Task ht_celery.tasks.run_command[11631d0b-0783-4c95-94e1-2cae3a15ceac] succeeded in 0.0419111909577623s: [b'', b'', 1]
+[2016-12-14 11:02:37,210: INFO/MainProcess] Task ht_celery.tasks.run_command[c0bff592-cd11-4b05-8bc0-0fc9cb03c80b] succeeded in 300.04497136210557s: [b'', b'', 0]
+[2016-12-14 11:02:37,214: INFO/MainProcess] Received task: ht_celery.tasks.run_command[8da84e98-e5af-447b-99de-6a000aa3b488]
+[2016-12-14 11:02:37,307: INFO/MainProcess] Task ht_celery.tasks.run_command[4c627b47-b9a2-480f-88b8-e43720eb8d1f] succeeded in 300.08633567998186s: [b'', b'', 0]
+[2016-12-14 11:02:37,311: INFO/MainProcess] Received task: ht_celery.tasks.run_command[c73107e4-eb63-43d3-bd48-c5d596c7edf2]
+[2016-12-14 11:02:37,372: INFO/MainProcess] Task ht_celery.tasks.run_command[6d0ff7e8-ae19-4b91-9fd2-05add8776a77] succeeded in 300.1457896459615s: [b'', b'', 0]
+[2016-12-14 11:02:37,375: INFO/MainProcess] Received task: ht_celery.tasks.run_command[65012935-58ca-410d-acfe-69370f09d245]
+[2016-12-14 11:02:37,377: INFO/MainProcess] Received task: ht_celery.tasks.run_command[ae15d7f6-dc54-4b9b-89c6-87590279eaba]
+[2016-12-14 11:07:37,341: INFO/MainProcess] Task ht_celery.tasks.run_command[d34581ab-4ac6-4f70-bb96-edfc4892f85a] succeeded in 300.132180463057s: [b'', b'', 0]
+[2016-12-14 11:07:37,345: INFO/MainProcess] Received task: ht_celery.tasks.run_command[7ec65894-04c6-42d9-a936-b8a00853dd95]
+[2016-12-14 11:07:37,395: INFO/MainProcess] Task ht_celery.tasks.run_command[24287e12-98c5-41c6-b7c6-e3383e7e4938] succeeded in 300.0895985639654s: [b'', b'', 0]
+[2016-12-14 11:07:37,398: INFO/MainProcess] Received task: ht_celery.tasks.run_command[b875908c-8eb8-49db-8651-705246abd64b]
+[2016-12-14 11:07:37,497: INFO/MainProcess] Task ht_celery.tasks.run_command[d7306e9c-2457-42d1-972d-6120612bfcf1] succeeded in 300.1227265750058s: [b'', b'', 0]
+[2016-12-14 11:07:37,499: INFO/MainProcess] Task ht_celery.tasks.run_command[66a69fb1-808a-4254-a32c-fddaed51da4b] succeeded in 300.1273196210386s: [b'', b'', 0]
+[2016-12-14 11:07:37,505: INFO/MainProcess] Received task: ht_celery.tasks.run_command[367719cf-3f8e-41b3-8442-be1405aa96a8]
+[2016-12-14 11:07:37,507: INFO/MainProcess] Received task: ht_celery.tasks.run_command[5dba3bf0-99e7-4546-af79-3beef50ba9ca]
+[2016-12-14 11:12:37,468: INFO/MainProcess] Task ht_celery.tasks.run_command[c4c4790a-b10a-410c-9f63-e54a25881b12] succeeded in 300.1251508570276s: [b'', b'', 0]
+[2016-12-14 11:12:37,470: INFO/MainProcess] Received task: ht_celery.tasks.run_command[59690046-d369-4db4-9165-0a1be1e5044c]
+[2016-12-14 11:12:37,527: INFO/MainProcess] Task ht_celery.tasks.run_command[8e28892a-f84f-46dd-ac25-2618c4a5b8a3] succeeded in 300.1312742859591s: [b'', b'', 0]
+[2016-12-14 11:12:37,530: INFO/MainProcess] Received task: ht_celery.tasks.run_command[d40d6a5c-925f-45b0-861d-8a6bd5226563]
+[2016-12-14 11:12:37,587: INFO/MainProcess] Task ht_celery.tasks.run_command[79fae015-fefb-4aa0-b409-fd789fcefbd0] succeeded in 300.0861139789922s: [b'', b'', 0]
+[2016-12-14 11:12:37,589: INFO/MainProcess] Received task: ht_celery.tasks.run_command[c5413f1a-ba1d-423d-9887-fdd987e9e8ed]
+[2016-12-14 11:12:37,613: INFO/MainProcess] Task ht_celery.tasks.run_command[2abb7d0b-f0a5-4aec-ba45-e47e4cb979e0] succeeded in 0.024836752098053694s: [b'', b'', 1]
+[2016-12-14 11:12:37,646: INFO/MainProcess] Task ht_celery.tasks.run_command[b8365228-0d35-4076-805f-69c24928c372] succeeded in 300.1447768040234s: [b'', b'', 0]
+[2016-12-14 11:12:37,650: INFO/MainProcess] Received task: ht_celery.tasks.run_command[bac1d5dc-a3bf-4236-a6c6-610e4415bf52]
+[2016-12-14 11:17:37,546: INFO/MainProcess] Task ht_celery.tasks.run_command[e71f7aa0-8d32-4ba6-ae36-dcdcff4c99f7] succeeded in 300.0762680490734s: [b'', b'', 0]
+[2016-12-14 11:17:37,550: INFO/MainProcess] Received task: ht_celery.tasks.run_command[0faeca34-be9d-4b32-adb8-1b7197ad8066]
+[2016-12-14 11:17:37,640: INFO/MainProcess] Task ht_celery.tasks.run_command[e9d2ca12-5b82-405d-b221-019b88cdf497] succeeded in 300.1115850820206s: [b'', b'', 0]
+[2016-12-14 11:17:37,644: INFO/MainProcess] Received task: ht_celery.tasks.run_command[5f2eaf41-0d1a-4315-9537-3e8d5049a739]
+[2016-12-14 11:17:37,646: INFO/MainProcess] Received task: ht_celery.tasks.run_command[fd92c0c6-4410-47fe-9499-8e05cc7942e1]
+[2016-12-14 11:17:37,778: INFO/MainProcess] Task ht_celery.tasks.run_command[ddde82f2-2533-4e50-b954-9e9513f1c531] succeeded in 300.13198016409297s: [b'', b'', 0]
+[2016-12-14 11:17:37,784: INFO/MainProcess] Received task: ht_celery.tasks.run_command[ca1fa262-be15-4b25-875d-d63b62be9234]
+[2016-12-14 11:22:37,645: INFO/MainProcess] Task ht_celery.tasks.run_command[f47b993b-5656-45ad-b3a5-23d0fa56dff3] succeeded in 300.09974744496867s: [b'', b'', 0]
+[2016-12-14 11:22:37,648: INFO/MainProcess] Received task: ht_celery.tasks.run_command[b1b59ee0-7e76-43c2-a186-8c78ea870a37]
+[2016-12-14 11:22:37,766: INFO/MainProcess] Task ht_celery.tasks.run_command[ceb58bf4-7a57-4868-8225-d098a162a0a9] succeeded in 300.1261052869959s: [b'', b'', 0]
+[2016-12-14 11:22:37,769: INFO/MainProcess] Received task: ht_celery.tasks.run_command[5bd46072-da84-4f54-9a8c-f862853ebe74]
+[2016-12-14 11:22:37,778: INFO/MainProcess] Task ht_celery.tasks.run_command[6b854cb0-2889-4df4-8696-7b961ee08af2] succeeded in 300.1357068079524s: [b'', b'', 0]
+[2016-12-14 11:22:37,782: INFO/MainProcess] Received task: ht_celery.tasks.run_command[6246ce2a-0681-4961-875a-6a3bfbd6d1ef]
+[2016-12-14 11:22:37,798: INFO/MainProcess] Task ht_celery.tasks.run_command[c73107e4-eb63-43d3-bd48-c5d596c7edf2] succeeded in 0.03025371499825269s: [b'', b'', 1]
+[2016-12-14 11:22:37,809: INFO/MainProcess] Task ht_celery.tasks.run_command[65012935-58ca-410d-acfe-69370f09d245] succeeded in 0.029914708924479783s: [b'', b'', 244]
+[2016-12-14 11:22:37,883: INFO/MainProcess] Task ht_celery.tasks.run_command[f5a2d782-e5f4-49b4-b7b6-8e55bdbf7d61] succeeded in 300.1043482349487s: [b'', b'', 0]
+[2016-12-14 11:22:37,887: INFO/MainProcess] Received task: ht_celery.tasks.run_command[37b17800-079b-4b02-9948-293f53d875a8]
+[2016-12-14 11:22:37,889: INFO/MainProcess] Received task: ht_celery.tasks.run_command[e00620a1-b61b-4338-b299-efb39d517dca]
+[2016-12-14 11:27:37,731: INFO/MainProcess] Task ht_celery.tasks.run_command[8da84e98-e5af-447b-99de-6a000aa3b488] succeeded in 300.08504092600197s: [b'', b'', 0]
+[2016-12-14 11:27:37,734: INFO/MainProcess] Received task: ht_celery.tasks.run_command[e1fd6f53-2574-47d9-8166-d7d24f74baf9]
+[2016-12-14 11:27:37,736: INFO/MainProcess] Received task: ht_celery.tasks.run_command[5d1d9fb0-67ab-4d1c-8c59-0648109d5789]
+[2016-12-14 11:27:38,002: INFO/MainProcess] Task ht_celery.tasks.run_command[ae15d7f6-dc54-4b9b-89c6-87590279eaba] succeeded in 300.1179051529616s: [b'', b'', 0]
+[2016-12-14 11:27:38,007: INFO/MainProcess] Received task: ht_celery.tasks.run_command[8833102b-3bfe-43f5-9bbe-2d25e4d19c83]
+[2016-12-14 11:27:38,017: INFO/MainProcess] Task ht_celery.tasks.run_command[b875908c-8eb8-49db-8651-705246abd64b] succeeded in 300.13217356591485s: [b'', b'', 0]
+[2016-12-14 11:27:38,036: INFO/MainProcess] Task ht_celery.tasks.run_command[5dba3bf0-99e7-4546-af79-3beef50ba9ca] succeeded in 0.03255185601301491s: [b'', b'', 1]
+[2016-12-14 11:27:38,039: INFO/MainProcess] Received task: ht_celery.tasks.run_command[65980356-a86c-478f-81d4-c16f8c66ebf1]
+[2016-12-14 11:27:40,779: INFO/MainProcess] Task ht_celery.tasks.run_command[367719cf-3f8e-41b3-8442-be1405aa96a8] succeeded in 3.0457671949407086s: [b'', b'', 0]
+[2016-12-14 11:27:40,781: INFO/MainProcess] Task ht_celery.tasks.run_command[7ec65894-04c6-42d9-a936-b8a00853dd95] succeeded in 3.04959087993484s: [b'', b'', 0]
+[2016-12-14 11:27:40,787: INFO/MainProcess] Received task: ht_celery.tasks.run_command[2f47e848-095d-43dd-9218-ad445775c9fd]
+[2016-12-14 11:27:40,789: INFO/MainProcess] Received task: ht_celery.tasks.run_command[b92a858a-e77a-4994-b03b-be6d8d334780]
+[2016-12-14 11:27:40,791: INFO/MainProcess] Received task: ht_celery.tasks.run_command[b4905c0c-c5d8-4d81-bb82-7a4c0f136dcb]
+[2016-12-14 11:27:40,820: INFO/MainProcess] Task ht_celery.tasks.run_command[59690046-d369-4db4-9165-0a1be1e5044c] succeeded in 0.04094436997547746s: [b'', b'', 1]
+[2016-12-14 11:27:40,823: INFO/MainProcess] Received task: ht_celery.tasks.run_command[86b837a6-09e1-434c-90d3-2e0d241e8c9a]
+[2016-12-14 11:27:40,847: INFO/MainProcess] Task ht_celery.tasks.run_command[0faeca34-be9d-4b32-adb8-1b7197ad8066] succeeded in 0.026015287032350898s: [b'', b'', 1]
+[2016-12-14 11:27:41,079: INFO/MainProcess] Task ht_celery.tasks.run_command[d40d6a5c-925f-45b0-861d-8a6bd5226563] succeeded in 3.042306515038945s: [b'', b'', 0]
+[2016-12-14 11:27:41,082: INFO/MainProcess] Received task: ht_celery.tasks.run_command[db779699-272d-408e-9534-08d31877e851]
+[2016-12-14 11:27:43,825: INFO/MainProcess] Task ht_celery.tasks.run_command[bac1d5dc-a3bf-4236-a6c6-610e4415bf52] succeeded in 3.042867909069173s: [b'', b'', 0]
+[2016-12-14 11:27:43,828: INFO/MainProcess] Received task: ht_celery.tasks.run_command[6d847139-6318-4058-a83b-d7b0d69fae71]
+[2016-12-14 11:27:43,831: INFO/MainProcess] Task ht_celery.tasks.run_command[c5413f1a-ba1d-423d-9887-fdd987e9e8ed] succeeded in 3.0489840150112286s: [b'', b'', 0]
+[2016-12-14 11:27:43,835: INFO/MainProcess] Received task: ht_celery.tasks.run_command[8a24888e-ff5f-4970-b20b-07461ae31f1a]
+[2016-12-14 11:27:43,837: INFO/MainProcess] Received task: ht_celery.tasks.run_command[32fb7d2d-5642-4c2f-95dd-27f24d7d9587]
+[2016-12-14 11:27:43,872: INFO/MainProcess] Task ht_celery.tasks.run_command[b1b59ee0-7e76-43c2-a186-8c78ea870a37] succeeded in 0.039275532006286085s: [b'', b'', 1]
+[2016-12-14 11:27:43,873: INFO/MainProcess] Task ht_celery.tasks.run_command[fd92c0c6-4410-47fe-9499-8e05cc7942e1] succeeded in 0.04261971893720329s: [b'', b'', 1]
+[2016-12-14 11:27:43,875: INFO/MainProcess] Received task: ht_celery.tasks.run_command[725fafb3-de77-47e0-a22b-7e38be1f32b7]
+[2016-12-14 11:27:43,899: INFO/MainProcess] Task ht_celery.tasks.run_command[6246ce2a-0681-4961-875a-6a3bfbd6d1ef] succeeded in 0.02550046402029693s: [b'', b'', 1]
+[2016-12-14 11:27:44,114: INFO/MainProcess] Task ht_celery.tasks.run_command[5f2eaf41-0d1a-4315-9537-3e8d5049a739] succeeded in 3.0349629119737074s: [b'', b'', 0]
+[2016-12-14 11:27:44,117: INFO/MainProcess] Received task: ht_celery.tasks.run_command[07c74305-59e8-4708-abac-0652de86d674]
+[2016-12-14 11:27:44,119: INFO/MainProcess] Received task: ht_celery.tasks.run_command[3dae9c12-8ebf-4c8a-9f6a-b86cb485afca]
+[2016-12-14 11:27:44,142: INFO/MainProcess] Task ht_celery.tasks.run_command[5bd46072-da84-4f54-9a8c-f862853ebe74] succeeded in 0.028591391979716718s: [b'', b'', 1]
+[2016-12-14 11:27:44,145: INFO/MainProcess] Received task: ht_celery.tasks.run_command[535e925d-fb70-4da2-b67e-b0871c45300e]
+[2016-12-14 11:27:46,864: INFO/MainProcess] Task ht_celery.tasks.run_command[ca1fa262-be15-4b25-875d-d63b62be9234] succeeded in 3.0382460879627615s: [b'', b'', 0]
+[2016-12-14 11:27:46,868: INFO/MainProcess] Received task: ht_celery.tasks.run_command[8b09e407-152c-4520-8a42-3b9225db4eb8]
+[2016-12-14 11:27:46,869: INFO/MainProcess] Received task: ht_celery.tasks.run_command[a3e901d0-74ac-433f-9079-380ae09816b2]
+[2016-12-14 11:27:47,152: INFO/MainProcess] Task ht_celery.tasks.run_command[e00620a1-b61b-4338-b299-efb39d517dca] succeeded in 3.0363372589927167s: [b'', b'', 0]
+[2016-12-14 11:27:47,178: INFO/MainProcess] Task ht_celery.tasks.run_command[e1fd6f53-2574-47d9-8166-d7d24f74baf9] succeeded in 3.0347217769594863s: [b'', b'', 0]
+[2016-12-14 11:27:47,180: INFO/MainProcess] Received task: ht_celery.tasks.run_command[651549c4-146f-437b-ae83-276fbeb19c73]
+[2016-12-14 11:27:47,204: INFO/MainProcess] Task ht_celery.tasks.run_command[65980356-a86c-478f-81d4-c16f8c66ebf1] succeeded in 0.024547896930016577s: [b'', b'', 1]
+[2016-12-14 11:27:47,206: INFO/MainProcess] Received task: ht_celery.tasks.run_command[507381a8-dfeb-4a7c-951d-d040b95936cf]
+[2016-12-14 11:27:49,900: INFO/MainProcess] Task ht_celery.tasks.run_command[37b17800-079b-4b02-9948-293f53d875a8] succeeded in 3.035975944949314s: [b'', b'', 0]
+[2016-12-14 11:27:49,902: INFO/MainProcess] Task ht_celery.tasks.run_command[5d1d9fb0-67ab-4d1c-8c59-0648109d5789] succeeded in 3.035727776004933s: [b'', b'', 0]
+[2016-12-14 11:27:49,904: INFO/MainProcess] Received task: ht_celery.tasks.run_command[fc94f82c-d94a-407d-902b-459951d125e6]
+[2016-12-14 11:27:49,906: INFO/MainProcess] Received task: ht_celery.tasks.run_command[4f1be928-f318-42d7-a455-4717f0b60122]
+[2016-12-14 11:27:49,934: INFO/MainProcess] Task ht_celery.tasks.run_command[b92a858a-e77a-4994-b03b-be6d8d334780] succeeded in 0.03147604106925428s: [b'', b'', 1]
+[2016-12-14 11:27:49,937: INFO/MainProcess] Received task: ht_celery.tasks.run_command[2f6aa48c-1348-484a-a831-a3b9c426deab]
+[2016-12-14 11:27:49,969: INFO/MainProcess] Task ht_celery.tasks.run_command[86b837a6-09e1-434c-90d3-2e0d241e8c9a] succeeded in 0.03404824703466147s: [b'', b'', 1]
+[2016-12-14 11:27:50,245: INFO/MainProcess] Task ht_celery.tasks.run_command[2f47e848-095d-43dd-9218-ad445775c9fd] succeeded in 3.0399017318850383s: [b'', b'', 0]
+[2016-12-14 11:27:50,250: INFO/MainProcess] Received task: ht_celery.tasks.run_command[3822aac1-0e49-43d4-ab50-dc54208e43c4]
+[2016-12-14 11:27:50,252: INFO/MainProcess] Received task: ht_celery.tasks.run_command[75c97f1a-d77e-4555-b615-8966804b9879]
+[2016-12-14 11:27:50,280: INFO/MainProcess] Task ht_celery.tasks.run_command[db779699-272d-408e-9534-08d31877e851] succeeded in 0.035667494987137616s: [b'', b'', 1]
+[2016-12-14 11:27:52,936: INFO/MainProcess] Task ht_celery.tasks.run_command[8833102b-3bfe-43f5-9bbe-2d25e4d19c83] succeeded in 3.0359082659706473s: [b'', b'', 0]
+[2016-12-14 11:27:52,939: INFO/MainProcess] Received task: ht_celery.tasks.run_command[2f17453c-048f-42d7-a6f2-6a3a2e416fbf]
+[2016-12-14 11:27:52,941: INFO/MainProcess] Received task: ht_celery.tasks.run_command[d8664c30-6eb8-4f14-a8c2-4ccf7d736bae]
+[2016-12-14 11:27:52,967: INFO/MainProcess] Task ht_celery.tasks.run_command[b4905c0c-c5d8-4d81-bb82-7a4c0f136dcb] succeeded in 0.03102366195525974s: [b'', b'', 1]
+[2016-12-14 11:27:52,968: INFO/MainProcess] Task ht_celery.tasks.run_command[32fb7d2d-5642-4c2f-95dd-27f24d7d9587] succeeded in 0.029781450051814318s: [b'', b'', 1]
+[2016-12-14 11:27:52,971: INFO/MainProcess] Received task: ht_celery.tasks.run_command[395b16bc-9fcd-492e-a834-42229402a6e8]
+[2016-12-14 11:27:52,973: INFO/MainProcess] Received task: ht_celery.tasks.run_command[fe04c54b-ee52-43ff-9fba-594a1bab4e33]
+[2016-12-14 11:27:53,291: INFO/MainProcess] Task ht_celery.tasks.run_command[6d847139-6318-4058-a83b-d7b0d69fae71] succeeded in 3.0425067599862814s: [b'', b'', 0]
+[2016-12-14 11:27:53,294: INFO/MainProcess] Received task: ht_celery.tasks.run_command[2347d193-b1d5-4fc1-9ef6-cdd4eb9c7337]
+[2016-12-14 11:27:56,017: INFO/MainProcess] Task ht_celery.tasks.run_command[8a24888e-ff5f-4970-b20b-07461ae31f1a] succeeded in 3.049832339049317s: [b'', b'', 0]
+[2016-12-14 11:27:56,019: INFO/MainProcess] Task ht_celery.tasks.run_command[725fafb3-de77-47e0-a22b-7e38be1f32b7] succeeded in 3.049373604939319s: [b'', b'', 0]
+[2016-12-14 11:27:56,022: INFO/MainProcess] Received task: ht_celery.tasks.run_command[cc0f69a4-c752-408b-99af-aa515cdf4a29]
+[2016-12-14 11:27:56,024: INFO/MainProcess] Received task: ht_celery.tasks.run_command[9df68408-f147-4d98-8593-6b7fa48fa561]
+[2016-12-14 11:27:56,025: INFO/MainProcess] Received task: ht_celery.tasks.run_command[8e987759-04e2-4fdf-b122-d9b048f53451]
+[2016-12-14 11:27:56,050: INFO/MainProcess] Task ht_celery.tasks.run_command[3dae9c12-8ebf-4c8a-9f6a-b86cb485afca] succeeded in 0.03397696802858263s: [b'', b'', 244]
+[2016-12-14 11:27:56,061: INFO/MainProcess] Task ht_celery.tasks.run_command[8b09e407-152c-4520-8a42-3b9225db4eb8] succeeded in 0.04103907907847315s: [b'', b'', 1]
+[2016-12-14 11:27:56,064: INFO/MainProcess] Received task: ht_celery.tasks.run_command[de5109e1-2546-4cb4-9789-a79f242bf68a]
+[2016-12-14 11:27:56,330: INFO/MainProcess] Task ht_celery.tasks.run_command[07c74305-59e8-4708-abac-0652de86d674] succeeded in 3.0404451409121975s: [b'', b'', 0]
+[2016-12-14 11:27:56,333: INFO/MainProcess] Received task: ht_celery.tasks.run_command[7b8bbab3-e0f1-425e-8d4c-71682d111fd3]
+[2016-12-14 11:27:56,355: INFO/MainProcess] Task ht_celery.tasks.run_command[a3e901d0-74ac-433f-9079-380ae09816b2] succeeded in 0.02555915992707014s: [b'', b'', 1]
+[2016-12-14 11:27:56,357: INFO/MainProcess] Received task: ht_celery.tasks.run_command[a805115b-bf17-4f60-87fb-abafb4d868bc]
+[2016-12-14 11:27:56,381: INFO/MainProcess] Task ht_celery.tasks.run_command[fc94f82c-d94a-407d-902b-459951d125e6] succeeded in 0.02490825892891735s: [b'', b'', 1]
+[2016-12-14 11:27:56,383: INFO/MainProcess] Received task: ht_celery.tasks.run_command[8bd154b2-4cbf-468b-9d84-8afc4fe6eae7]
+[2016-12-14 11:27:56,408: INFO/MainProcess] Task ht_celery.tasks.run_command[4f1be928-f318-42d7-a455-4717f0b60122] succeeded in 0.025531166000291705s: [b'', b'', 244]
+[2016-12-14 11:27:59,068: INFO/MainProcess] Task ht_celery.tasks.run_command[535e925d-fb70-4da2-b67e-b0871c45300e] succeeded in 3.047892746049911s: [b'', b'', 0]
+[2016-12-14 11:27:59,070: INFO/MainProcess] Received task: ht_celery.tasks.run_command[b59678f7-ebd2-474f-8fd7-c74189823bdd]
+[2016-12-14 11:27:59,092: INFO/MainProcess] Task ht_celery.tasks.run_command[651549c4-146f-437b-ae83-276fbeb19c73] succeeded in 3.0297538170125335s: [b'', b'', 0]
+[2016-12-14 11:27:59,096: INFO/MainProcess] Received task: ht_celery.tasks.run_command[05104172-bba4-43b2-99ee-aef7993d85b1]
+[2016-12-14 11:27:59,098: INFO/MainProcess] Received task: ht_celery.tasks.run_command[81e78dae-eca8-4ba0-8bac-8d7e3a35f756]
+[2016-12-14 11:27:59,099: INFO/MainProcess] Task ht_celery.tasks.run_command[507381a8-dfeb-4a7c-951d-d040b95936cf] succeeded in 0.031868292950093746s: [b'', b'', 1]
+[2016-12-14 11:27:59,106: INFO/MainProcess] Received task: ht_celery.tasks.run_command[6c72ead3-2070-4a5b-b939-1ab83df70c01]
+[2016-12-14 11:27:59,108: INFO/MainProcess] Received task: ht_celery.tasks.run_command[97b0b3e1-cbb3-428e-820e-9baf6bcfe6ff]
+[2016-12-14 11:27:59,138: INFO/MainProcess] Task ht_celery.tasks.run_command[75c97f1a-d77e-4555-b615-8966804b9879] succeeded in 0.04317579697817564s: [b'', b'', 244]
+[2016-12-14 11:27:59,139: INFO/MainProcess] Task ht_celery.tasks.run_command[3822aac1-0e49-43d4-ab50-dc54208e43c4] succeeded in 0.0449974259827286s: [b'', b'', 244]
+[2016-12-14 11:27:59,143: INFO/MainProcess] Received task: ht_celery.tasks.run_command[4da9e0a8-03f8-4db4-8f78-7ac06be9f078]
+[2016-12-14 11:27:59,151: INFO/MainProcess] Task ht_celery.tasks.run_command[2f17453c-048f-42d7-a6f2-6a3a2e416fbf] succeeded in 0.04943750298116356s: [b'', b'', 244]
+[2016-12-14 11:27:59,154: INFO/MainProcess] Received task: ht_celery.tasks.run_command[070993e9-ea5a-400b-8223-1385afbe4af7]
+[2016-12-14 11:27:59,170: INFO/MainProcess] Task ht_celery.tasks.run_command[395b16bc-9fcd-492e-a834-42229402a6e8] succeeded in 0.029615401988849044s: [b'', b'', 1]
+[2016-12-14 11:27:59,173: INFO/MainProcess] Received task: ht_celery.tasks.run_command[90f3c5a6-9360-4bb3-88fc-08ffe031074c]
+[2016-12-14 11:27:59,186: INFO/MainProcess] Task ht_celery.tasks.run_command[fe04c54b-ee52-43ff-9fba-594a1bab4e33] succeeded in 0.03326837904751301s: [b'', b'', 1]
+[2016-12-14 11:27:59,201: INFO/MainProcess] Task ht_celery.tasks.run_command[2347d193-b1d5-4fc1-9ef6-cdd4eb9c7337] succeeded in 0.02980668004602194s: [b'', b'', 1]
+[2016-12-14 11:27:59,204: INFO/MainProcess] Received task: ht_celery.tasks.run_command[f90abf51-7c89-4400-a6dd-9f559b75c483]
+[2016-12-14 11:28:02,139: INFO/MainProcess] Task ht_celery.tasks.run_command[2f6aa48c-1348-484a-a831-a3b9c426deab] succeeded in 3.04751420696266s: [b'', b'', 0]
+[2016-12-14 11:28:02,142: INFO/MainProcess] Received task: ht_celery.tasks.run_command[9674af68-65e0-44de-95f1-bac087d10fb9]
+[2016-12-14 11:28:02,144: INFO/MainProcess] Received task: ht_celery.tasks.run_command[ce5dfe04-adc0-49bd-b8ec-ffbdd5dfc102]
+[2016-12-14 11:28:02,167: INFO/MainProcess] Task ht_celery.tasks.run_command[d8664c30-6eb8-4f14-a8c2-4ccf7d736bae] succeeded in 0.02796645404305309s: [b'', b'', 1]
+[2016-12-14 11:28:02,174: INFO/MainProcess] Received task: ht_celery.tasks.run_command[c47437f1-534f-4013-a532-a9c355c401cc]
+[2016-12-14 11:28:02,176: INFO/MainProcess] Received task: ht_celery.tasks.run_command[4e18e294-89a2-41a6-bd11-da755e6977f4]
+[2016-12-14 11:28:02,177: INFO/MainProcess] Task ht_celery.tasks.run_command[8e987759-04e2-4fdf-b122-d9b048f53451] succeeded in 0.036165287951007485s: [b'', b'', 1]
+[2016-12-14 11:28:02,202: INFO/MainProcess] Task ht_celery.tasks.run_command[de5109e1-2546-4cb4-9789-a79f242bf68a] succeeded in 0.03207943507004529s: [b'', b'', 1]
+[2016-12-14 11:28:02,237: INFO/MainProcess] Task ht_celery.tasks.run_command[9df68408-f147-4d98-8593-6b7fa48fa561] succeeded in 3.0343121589394286s: [b'', b'', 0]
+[2016-12-14 11:28:02,243: INFO/MainProcess] Received task: ht_celery.tasks.run_command[05f1b484-cf9b-4952-8daf-9beafa886f54]
+[2016-12-14 11:28:02,249: INFO/MainProcess] Received task: ht_celery.tasks.run_command[0442229c-ee15-43f0-a21a-4b18d56b4c1f]
+[2016-12-14 11:28:05,208: INFO/MainProcess] Task ht_celery.tasks.run_command[cc0f69a4-c752-408b-99af-aa515cdf4a29] succeeded in 3.0412209309870377s: [b'', b'', 0]
+[2016-12-14 11:28:05,213: INFO/MainProcess] Received task: ht_celery.tasks.run_command[e698446f-e6f9-4283-a2e0-b7c14e9f310e]
+[2016-12-14 11:28:05,215: INFO/MainProcess] Received task: ht_celery.tasks.run_command[2a5a5afd-30c9-4248-986e-a052aae209f3]
+[2016-12-14 11:28:05,281: INFO/MainProcess] Task ht_celery.tasks.run_command[a805115b-bf17-4f60-87fb-abafb4d868bc] succeeded in 3.044610042939894s: [b'', b'', 0]
+[2016-12-14 11:28:05,283: INFO/MainProcess] Task ht_celery.tasks.run_command[8bd154b2-4cbf-468b-9d84-8afc4fe6eae7] succeeded in 3.0429658769862726s: [b'', b'', 0]
+[2016-12-14 11:28:05,285: INFO/MainProcess] Received task: ht_celery.tasks.run_command[ab796faa-e489-4272-a272-21887502b2e8]
+[2016-12-14 11:28:05,309: INFO/MainProcess] Task ht_celery.tasks.run_command[81e78dae-eca8-4ba0-8bac-8d7e3a35f756] succeeded in 0.02551421499811113s: [b'', b'', 1]
+[2016-12-14 11:28:05,312: INFO/MainProcess] Received task: ht_celery.tasks.run_command[8e05764b-188e-4806-b582-cdf1ed98ec70]
+[2016-12-14 11:28:08,248: INFO/MainProcess] Task ht_celery.tasks.run_command[b59678f7-ebd2-474f-8fd7-c74189823bdd] succeeded in 3.037822737940587s: [b'', b'', 0]
+[2016-12-14 11:28:08,249: INFO/MainProcess] Task ht_celery.tasks.run_command[7b8bbab3-e0f1-425e-8d4c-71682d111fd3] succeeded in 3.0421945900889114s: [b'', b'', 0]
+[2016-12-14 11:28:08,253: INFO/MainProcess] Received task: ht_celery.tasks.run_command[03c5fcd3-2ccc-499a-91c3-a70eaf4d4d0b]
+[2016-12-14 11:28:08,255: INFO/MainProcess] Received task: ht_celery.tasks.run_command[99e562d1-c4ec-4d0b-a06d-705355d129b1]
+[2016-12-14 11:28:08,281: INFO/MainProcess] Task ht_celery.tasks.run_command[97b0b3e1-cbb3-428e-820e-9baf6bcfe6ff] succeeded in 0.03129699593409896s: [b'', b'', 1]
+[2016-12-14 11:28:08,284: INFO/MainProcess] Received task: ht_celery.tasks.run_command[523039b3-5847-430b-86ce-a8a467368bec]
+[2016-12-14 11:28:08,353: INFO/MainProcess] Task ht_celery.tasks.run_command[6c72ead3-2070-4a5b-b939-1ab83df70c01] succeeded in 3.0421015929896384s: [b'', b'', 0]
+[2016-12-14 11:28:08,355: INFO/MainProcess] Received task: ht_celery.tasks.run_command[6501ba55-842d-4f94-855d-8257f2277727]
+[2016-12-14 11:28:11,284: INFO/MainProcess] Task ht_celery.tasks.run_command[05104172-bba4-43b2-99ee-aef7993d85b1] succeeded in 3.0357373520964757s: [b'', b'', 0]
+[2016-12-14 11:28:11,287: INFO/MainProcess] Received task: ht_celery.tasks.run_command[45b7f346-a463-4703-bf18-9d9e219b417c]
+[2016-12-14 11:28:11,289: INFO/MainProcess] Received task: ht_celery.tasks.run_command[69fd8d23-eec0-45af-9ced-3a92c5775b73]
+[2016-12-14 11:28:11,311: INFO/MainProcess] Task ht_celery.tasks.run_command[070993e9-ea5a-400b-8223-1385afbe4af7] succeeded in 3.0280529109295458s: [b'', b'', 0]
+[2016-12-14 11:28:11,389: INFO/MainProcess] Task ht_celery.tasks.run_command[90f3c5a6-9360-4bb3-88fc-08ffe031074c] succeeded in 3.03425138106104s: [b'', b'', 0]
+[2016-12-14 11:28:11,393: INFO/MainProcess] Received task: ht_celery.tasks.run_command[3267905e-7862-408d-92ff-abe37c8bb4a2]
+[2016-12-14 11:28:11,423: INFO/MainProcess] Task ht_celery.tasks.run_command[ce5dfe04-adc0-49bd-b8ec-ffbdd5dfc102] succeeded in 0.033163911080919206s: [b'', b'', 244]
+[2016-12-14 11:28:11,425: INFO/MainProcess] Received task: ht_celery.tasks.run_command[6f77ed55-9a01-4f0b-8e82-0804f9469115]
+[2016-12-14 11:28:14,342: INFO/MainProcess] Task ht_celery.tasks.run_command[4da9e0a8-03f8-4db4-8f78-7ac06be9f078] succeeded in 3.0576743639539927s: [b'', b'', 0]
+[2016-12-14 11:28:14,344: INFO/MainProcess] Task ht_celery.tasks.run_command[f90abf51-7c89-4400-a6dd-9f559b75c483] succeeded in 3.058007000014186s: [b'', b'', 0]
+[2016-12-14 11:28:14,346: INFO/MainProcess] Received task: ht_celery.tasks.run_command[2c22b418-0056-4eae-bbc6-3bdcd3a19493]
+[2016-12-14 11:28:14,348: INFO/MainProcess] Received task: ht_celery.tasks.run_command[9fda5ab8-8557-464c-9050-9fe262dd1f42]
+[2016-12-14 11:28:14,385: INFO/MainProcess] Task ht_celery.tasks.run_command[9674af68-65e0-44de-95f1-bac087d10fb9] succeeded in 0.043889667955227196s: [b'', b'', 1]
+[2016-12-14 11:28:14,389: INFO/MainProcess] Received task: ht_celery.tasks.run_command[4691e8f3-9b56-4d32-8fb6-b1367541d5b3]
+[2016-12-14 11:28:14,391: INFO/MainProcess] Received task: ht_celery.tasks.run_command[e1da223e-9c93-41c9-a700-507936d2f68f]
+[2016-12-14 11:28:14,415: INFO/MainProcess] Task ht_celery.tasks.run_command[05f1b484-cf9b-4952-8daf-9beafa886f54] succeeded in 0.029942121007479727s: [b'', b'', 1]
+[2016-12-14 11:28:14,418: INFO/MainProcess] Task ht_celery.tasks.run_command[0442229c-ee15-43f0-a21a-4b18d56b4c1f] succeeded in 0.03073582798242569s: [b'', b'', 1]
+[2016-12-14 11:28:14,459: INFO/MainProcess] Task ht_celery.tasks.run_command[c47437f1-534f-4013-a532-a9c355c401cc] succeeded in 3.033977698069066s: [b'', b'', 0]
+[2016-12-14 11:28:14,463: INFO/MainProcess] Received task: ht_celery.tasks.run_command[67f2a54a-adce-43dc-a8a7-d9c759c6db82]
+[2016-12-14 11:28:14,465: INFO/MainProcess] Received task: ht_celery.tasks.run_command[36667901-b0b7-4e7c-afce-20e6e4c4ab06]
+[2016-12-14 11:28:17,399: INFO/MainProcess] Task ht_celery.tasks.run_command[4e18e294-89a2-41a6-bd11-da755e6977f4] succeeded in 3.053818264976144s: [b'', b'', 0]
+[2016-12-14 11:28:17,403: INFO/MainProcess] Received task: ht_celery.tasks.run_command[cb826316-54c3-4c79-8ed9-8454e53b1df3]
+[2016-12-14 11:28:17,405: INFO/MainProcess] Received task: ht_celery.tasks.run_command[436b30c2-76a8-446b-9a8f-2b31c6908ccc]
+[2016-12-14 11:28:17,491: INFO/MainProcess] Task ht_celery.tasks.run_command[e698446f-e6f9-4283-a2e0-b7c14e9f310e] succeeded in 3.0336415970232338s: [b'', b'', 0]
+[2016-12-14 11:28:17,498: INFO/MainProcess] Task ht_celery.tasks.run_command[ab796faa-e489-4272-a272-21887502b2e8] succeeded in 3.0356143480166793s: [b'', b'', 0]
+[2016-12-14 11:28:17,499: INFO/MainProcess] Received task: ht_celery.tasks.run_command[79509cc3-adb2-416d-bcb6-1e2df396a54e]
+[2016-12-14 11:28:17,523: INFO/MainProcess] Task ht_celery.tasks.run_command[03c5fcd3-2ccc-499a-91c3-a70eaf4d4d0b] succeeded in 0.03027631901204586s: [b'', b'', 1]
+[2016-12-14 11:28:17,525: INFO/MainProcess] Received task: ht_celery.tasks.run_command[875581fa-6cd4-4319-aca8-7214defe755e]
+[2016-12-14 11:28:20,439: INFO/MainProcess] Task ht_celery.tasks.run_command[2a5a5afd-30c9-4248-986e-a052aae209f3] succeeded in 3.0407706970581785s: [b'', b'', 0]
+[2016-12-14 11:28:20,440: INFO/MainProcess] Task ht_celery.tasks.run_command[8e05764b-188e-4806-b582-cdf1ed98ec70] succeeded in 3.0378618540707976s: [b'', b'', 0]
+[2016-12-14 11:28:20,445: INFO/MainProcess] Received task: ht_celery.tasks.run_command[c21be1e7-2d51-45f2-b0a5-779d8d244efc]
+[2016-12-14 11:28:20,447: INFO/MainProcess] Received task: ht_celery.tasks.run_command[7f0048db-4fc1-443e-9128-7c7d3b1d19f5]
+[2016-12-14 11:28:20,449: INFO/MainProcess] Received task: ht_celery.tasks.run_command[270aa391-5e04-4a73-83ec-ff2415b4b881]
+[2016-12-14 11:28:20,469: INFO/MainProcess] Task ht_celery.tasks.run_command[99e562d1-c4ec-4d0b-a06d-705355d129b1] succeeded in 0.029772383044473827s: [b'', b'', 1]
+[2016-12-14 11:28:20,472: INFO/MainProcess] Received task: ht_celery.tasks.run_command[1838e26e-472b-488b-8924-70320c120555]
+[2016-12-14 11:28:20,486: INFO/MainProcess] Task ht_celery.tasks.run_command[6501ba55-842d-4f94-855d-8257f2277727] succeeded in 0.043614886002615094s: [b'', b'', 1]
+[2016-12-14 11:28:20,499: INFO/MainProcess] Task ht_celery.tasks.run_command[69fd8d23-eec0-45af-9ced-3a92c5775b73] succeeded in 0.02965678204782307s: [b'', b'', 1]
+[2016-12-14 11:28:20,501: INFO/MainProcess] Received task: ht_celery.tasks.run_command[9a78eab8-7902-46b5-8e88-e63762b7312d]
+[2016-12-14 11:28:20,558: INFO/MainProcess] Task ht_celery.tasks.run_command[523039b3-5847-430b-86ce-a8a467368bec] succeeded in 3.0339110660133883s: [b'', b'', 0]
+[2016-12-14 11:28:20,560: INFO/MainProcess] Received task: ht_celery.tasks.run_command[fd9b46ee-a216-4c78-9137-ae21025a0d49]
+[2016-12-14 11:28:20,586: INFO/MainProcess] Task ht_celery.tasks.run_command[3267905e-7862-408d-92ff-abe37c8bb4a2] succeeded in 0.028586703003384173s: [b'', b'', 1]
+[2016-12-14 11:28:20,589: INFO/MainProcess] Received task: ht_celery.tasks.run_command[4dca0f51-e975-4c3a-96ef-31195e77bbfa]
+[2016-12-14 11:28:20,613: INFO/MainProcess] Task ht_celery.tasks.run_command[9fda5ab8-8557-464c-9050-9fe262dd1f42] succeeded in 0.025938290054909885s: [b'', b'', 1]
+[2016-12-14 11:28:20,615: INFO/MainProcess] Received task: ht_celery.tasks.run_command[debf6521-7f03-494e-b0c1-b9bac9ea3a40]
+[2016-12-14 11:28:20,639: INFO/MainProcess] Task ht_celery.tasks.run_command[4691e8f3-9b56-4d32-8fb6-b1367541d5b3] succeeded in 0.02454553497955203s: [b'', b'', 1]
+[2016-12-14 11:28:23,493: INFO/MainProcess] Task ht_celery.tasks.run_command[45b7f346-a463-4703-bf18-9d9e219b417c] succeeded in 3.049888888024725s: [b'', b'', 0]
+[2016-12-14 11:28:23,498: INFO/MainProcess] Received task: ht_celery.tasks.run_command[44d3a722-6230-4382-b68b-b70c02ac7128]
+[2016-12-14 11:28:23,529: INFO/MainProcess] Task ht_celery.tasks.run_command[6f77ed55-9a01-4f0b-8e82-0804f9469115] succeeded in 3.028387922910042s: [b'', b'', 0]
+[2016-12-14 11:28:23,533: INFO/MainProcess] Received task: ht_celery.tasks.run_command[91017a71-ae57-4c82-a812-aefd6cef8924]
+[2016-12-14 11:28:23,536: INFO/MainProcess] Received task: ht_celery.tasks.run_command[d64a62e6-9cef-4cad-8a0a-a84431612a83]
+[2016-12-14 11:28:23,564: INFO/MainProcess] Task ht_celery.tasks.run_command[36667901-b0b7-4e7c-afce-20e6e4c4ab06] succeeded in 0.03282849199604243s: [b'', b'', 1]
+[2016-12-14 11:28:23,566: INFO/MainProcess] Received task: ht_celery.tasks.run_command[a8f903e0-ddcc-453e-b480-0815d49a74d3]
+[2016-12-14 11:28:26,532: INFO/MainProcess] Task ht_celery.tasks.run_command[2c22b418-0056-4eae-bbc6-3bdcd3a19493] succeeded in 3.039841170073487s: [b'', b'', 0]
+[2016-12-14 11:28:26,534: INFO/MainProcess] Received task: ht_celery.tasks.run_command[876fa062-6b5a-4bcd-bbf3-e05e54c5ca88]
+[2016-12-14 11:28:26,561: INFO/MainProcess] Task ht_celery.tasks.run_command[e1da223e-9c93-41c9-a700-507936d2f68f] succeeded in 3.0329135820502415s: [b'', b'', 0]
+[2016-12-14 11:28:26,564: INFO/MainProcess] Received task: ht_celery.tasks.run_command[38f2ef87-1062-4998-a8ca-421a4d1885b3]
+[2016-12-14 11:28:26,601: INFO/MainProcess] Task ht_celery.tasks.run_command[cb826316-54c3-4c79-8ed9-8454e53b1df3] succeeded in 3.035978971980512s: [b'', b'', 0]
+[2016-12-14 11:28:26,605: INFO/MainProcess] Received task: ht_celery.tasks.run_command[26ba99b8-c20d-437a-8984-c49b10bbf447]
+[2016-12-14 11:28:26,629: INFO/MainProcess] Task ht_celery.tasks.run_command[875581fa-6cd4-4319-aca8-7214defe755e] succeeded in 0.026886519975960255s: [b'', b'', 244]
+[2016-12-14 11:28:26,631: INFO/MainProcess] Received task: ht_celery.tasks.run_command[889a290f-4be0-4693-b0d0-74634a9c2750]
+[2016-12-14 11:28:29,569: INFO/MainProcess] Task ht_celery.tasks.run_command[67f2a54a-adce-43dc-a8a7-d9c759c6db82] succeeded in 3.037627020967193s: [b'', b'', 0]
+[2016-12-14 11:28:29,571: INFO/MainProcess] Received task: ht_celery.tasks.run_command[f8946673-7c6b-4fbb-ba8d-e2f2a32cbeaf]
+[2016-12-14 11:28:29,593: INFO/MainProcess] Task ht_celery.tasks.run_command[436b30c2-76a8-446b-9a8f-2b31c6908ccc] succeeded in 3.031446559005417s: [b'', b'', 0]
+[2016-12-14 11:28:29,595: INFO/MainProcess] Received task: ht_celery.tasks.run_command[4a504c32-2f50-4495-96c8-bd41d15e358c]
+[2016-12-14 11:28:29,597: INFO/MainProcess] Task ht_celery.tasks.run_command[79509cc3-adb2-416d-bcb6-1e2df396a54e] succeeded in 0.028975949971936643s: [b'', b'', 1]
+[2016-12-14 11:28:29,601: INFO/MainProcess] Received task: ht_celery.tasks.run_command[8391376d-a9a8-41f6-a61d-84ff602b63f4]
+[2016-12-14 11:28:29,602: INFO/MainProcess] Received task: ht_celery.tasks.run_command[24b16164-9959-439d-abe2-a33904b1b442]
+[2016-12-14 11:28:29,631: INFO/MainProcess] Task ht_celery.tasks.run_command[270aa391-5e04-4a73-83ec-ff2415b4b881] succeeded in 0.03382515301927924s: [b'', b'', 244]
+[2016-12-14 11:28:29,661: INFO/MainProcess] Task ht_celery.tasks.run_command[c21be1e7-2d51-45f2-b0a5-779d8d244efc] succeeded in 3.0310393089894205s: [b'', b'', 0]
+[2016-12-14 11:28:29,664: INFO/MainProcess] Received task: ht_celery.tasks.run_command[bf799880-efcf-44e6-9e28-6631c235d2f7]
+[2016-12-14 11:28:32,634: INFO/MainProcess] Task ht_celery.tasks.run_command[7f0048db-4fc1-443e-9128-7c7d3b1d19f5] succeeded in 3.041367760975845s: [b'', b'', 0]
+[2016-12-14 11:28:32,639: INFO/MainProcess] Received task: ht_celery.tasks.run_command[597bcd6c-edb4-4ecd-8614-d687999034fc]
+[2016-12-14 11:28:32,642: INFO/MainProcess] Received task: ht_celery.tasks.run_command[317c43a1-aea1-4351-886d-12d8ea0e7c77]
+[2016-12-14 11:28:32,645: INFO/MainProcess] Task ht_celery.tasks.run_command[1838e26e-472b-488b-8924-70320c120555] succeeded in 3.0456084640463814s: [b'', b'', 0]
+[2016-12-14 11:28:32,649: INFO/MainProcess] Received task: ht_celery.tasks.run_command[c18aa118-a1c6-45df-8856-28b3db03ce01]
+[2016-12-14 11:28:32,676: INFO/MainProcess] Task ht_celery.tasks.run_command[fd9b46ee-a216-4c78-9137-ae21025a0d49] succeeded in 0.04238125996198505s: [b'', b'', 1]
+[2016-12-14 11:28:32,690: INFO/MainProcess] Task ht_celery.tasks.run_command[9a78eab8-7902-46b5-8e88-e63762b7312d] succeeded in 3.028586096013896s: [b'', b'', 0]
+[2016-12-14 11:28:32,694: INFO/MainProcess] Received task: ht_celery.tasks.run_command[c5da13da-86fb-4b17-b7c3-ce1ea01b143b]
+[2016-12-14 11:28:32,697: INFO/MainProcess] Received task: ht_celery.tasks.run_command[395cdf31-1a96-43b6-ab04-d441e363e6e4]
+[2016-12-14 11:28:32,730: INFO/MainProcess] Task ht_celery.tasks.run_command[44d3a722-6230-4382-b68b-b70c02ac7128] succeeded in 0.04033515392802656s: [b'', b'', 1]
+[2016-12-14 11:28:32,732: INFO/MainProcess] Task ht_celery.tasks.run_command[91017a71-ae57-4c82-a812-aefd6cef8924] succeeded in 0.04041094391141087s: [b'', b'', 1]
+[2016-12-14 11:28:35,687: INFO/MainProcess] Task ht_celery.tasks.run_command[4dca0f51-e975-4c3a-96ef-31195e77bbfa] succeeded in 3.0499214420560747s: [b'', b'', 0]
+[2016-12-14 11:28:35,694: INFO/MainProcess] Received task: ht_celery.tasks.run_command[780a97b3-8fae-41e7-8a94-ce4869c96ffd]
+[2016-12-14 11:28:35,696: INFO/MainProcess] Received task: ht_celery.tasks.run_command[1817b55e-ae16-4d6d-9133-386c64856ae3]
+[2016-12-14 11:28:35,698: INFO/MainProcess] Task ht_celery.tasks.run_command[debf6521-7f03-494e-b0c1-b9bac9ea3a40] succeeded in 3.051702633034438s: [b'', b'', 0]
+[2016-12-14 11:28:35,701: INFO/MainProcess] Received task: ht_celery.tasks.run_command[23a48d9f-12b3-480e-b255-fa156ec9a6e6]
+[2016-12-14 11:28:35,703: INFO/MainProcess] Received task: ht_celery.tasks.run_command[f3c82658-bb6e-4dcd-abd8-3913c2dbfc48]
+[2016-12-14 11:28:35,742: INFO/MainProcess] Task ht_celery.tasks.run_command[a8f903e0-ddcc-453e-b480-0815d49a74d3] succeeded in 0.048854846972972155s: [b'', b'', 1]
+[2016-12-14 11:28:38,736: INFO/MainProcess] Task ht_celery.tasks.run_command[d64a62e6-9cef-4cad-8a0a-a84431612a83] succeeded in 3.0497053469298407s: [b'', b'', 0]
+[2016-12-14 11:28:38,739: INFO/MainProcess] Task ht_celery.tasks.run_command[876fa062-6b5a-4bcd-bbf3-e05e54c5ca88] succeeded in 3.048260713927448s: [b'', b'', 0]
+[2016-12-14 11:28:38,743: INFO/MainProcess] Received task: ht_celery.tasks.run_command[d43e82d3-9cd5-46fc-97ee-ad7f74241dc5]
+[2016-12-14 11:28:38,745: INFO/MainProcess] Received task: ht_celery.tasks.run_command[2ed8caef-5bfb-47da-a749-fa4a89aa571e]
+[2016-12-14 11:28:38,747: INFO/MainProcess] Task ht_celery.tasks.run_command[38f2ef87-1062-4998-a8ca-421a4d1885b3] succeeded in 3.0470479358918965s: [b'', b'', 0]
+[2016-12-14 11:28:38,748: INFO/MainProcess] Received task: ht_celery.tasks.run_command[e303b533-bb41-4b13-b87c-26dcdac5ce2c]
+[2016-12-14 11:28:38,751: INFO/MainProcess] Received task: ht_celery.tasks.run_command[12303b74-c34a-4c38-b10f-5645bf4a3202]
+[2016-12-14 11:28:38,784: INFO/MainProcess] Task ht_celery.tasks.run_command[f8946673-7c6b-4fbb-ba8d-e2f2a32cbeaf] succeeded in 0.04389526997692883s: [b'', b'', 1]
+[2016-12-14 11:28:41,788: INFO/MainProcess] Task ht_celery.tasks.run_command[26ba99b8-c20d-437a-8984-c49b10bbf447] succeeded in 3.053623587009497s: [b'', b'', 0]
+[2016-12-14 11:28:41,790: INFO/MainProcess] Task ht_celery.tasks.run_command[889a290f-4be0-4693-b0d0-74634a9c2750] succeeded in 3.0502250149147585s: [b'', b'', 0]
+[2016-12-14 11:28:41,796: INFO/MainProcess] Received task: ht_celery.tasks.run_command[6516c249-461b-4e74-ae89-1577d76df86f]
+[2016-12-14 11:28:41,797: INFO/MainProcess] Received task: ht_celery.tasks.run_command[c0c3b605-758f-4193-9b4f-1cbfa1470e0c]
+[2016-12-14 11:28:41,799: INFO/MainProcess] Received task: ht_celery.tasks.run_command[dc8fb398-738b-44b0-8968-56158cbd8856]
+[2016-12-14 11:28:41,801: INFO/MainProcess] Task ht_celery.tasks.run_command[4a504c32-2f50-4495-96c8-bd41d15e358c] succeeded in 3.0517242130590603s: [b'', b'', 0]
+[2016-12-14 11:28:41,807: INFO/MainProcess] Received task: ht_celery.tasks.run_command[d14edfa2-b89c-416e-9562-f40de51cb528]
+[2016-12-14 11:28:41,840: INFO/MainProcess] Task ht_celery.tasks.run_command[bf799880-efcf-44e6-9e28-6631c235d2f7] succeeded in 0.048259468050673604s: [b'', b'', 1]
+[2016-12-14 11:28:44,846: INFO/MainProcess] Task ht_celery.tasks.run_command[8391376d-a9a8-41f6-a61d-84ff602b63f4] succeeded in 3.0578461730619892s: [b'', b'', 0]
+[2016-12-14 11:28:44,848: INFO/MainProcess] Task ht_celery.tasks.run_command[24b16164-9959-439d-abe2-a33904b1b442] succeeded in 3.0567215520422906s: [b'', b'', 0]
+[2016-12-14 11:28:44,852: INFO/MainProcess] Task ht_celery.tasks.run_command[597bcd6c-edb4-4ecd-8614-d687999034fc] succeeded in 3.0501048180740327s: [b'', b'', 0]
+[2016-12-14 11:28:44,853: INFO/MainProcess] Received task: ht_celery.tasks.run_command[ed9acd6b-905a-4fa2-bf00-d46c69ef0310]
+[2016-12-14 11:28:44,855: INFO/MainProcess] Received task: ht_celery.tasks.run_command[ce02fd63-d2c8-405b-8121-218546683376]
+[2016-12-14 11:28:44,857: INFO/MainProcess] Received task: ht_celery.tasks.run_command[b75a5b94-c283-43fb-9128-a1544276f006]
+[2016-12-14 11:28:44,860: INFO/MainProcess] Received task: ht_celery.tasks.run_command[803510b0-718f-4723-9e45-1faee2083ef2]
+[2016-12-14 11:28:44,890: INFO/MainProcess] Task ht_celery.tasks.run_command[c18aa118-a1c6-45df-8856-28b3db03ce01] succeeded in 0.0405348310014233s: [b'', b'', 1]
+[2016-12-14 11:28:44,896: INFO/MainProcess] Task ht_celery.tasks.run_command[317c43a1-aea1-4351-886d-12d8ea0e7c77] succeeded in 0.048174311057664454s: [b'', b'', 1]
+[2016-12-14 11:28:44,903: INFO/MainProcess] Task ht_celery.tasks.run_command[c5da13da-86fb-4b17-b7c3-ce1ea01b143b] succeeded in 0.0531016030581668s: [b'', b'', 1]
+[2016-12-14 11:28:44,932: INFO/MainProcess] Task ht_celery.tasks.run_command[1817b55e-ae16-4d6d-9133-386c64856ae3] succeeded in 0.03338053298648447s: [b'', b'', 1]
+[2016-12-14 11:28:47,919: INFO/MainProcess] Task ht_celery.tasks.run_command[395cdf31-1a96-43b6-ab04-d441e363e6e4] succeeded in 3.0616811281070113s: [b'', b'', 0]
+[2016-12-14 11:28:47,941: INFO/MainProcess] Task ht_celery.tasks.run_command[780a97b3-8fae-41e7-8a94-ce4869c96ffd] succeeded in 3.047768856980838s: [b'', b'', 0]
+[2016-12-14 11:28:47,949: INFO/MainProcess] Task ht_celery.tasks.run_command[f3c82658-bb6e-4dcd-abd8-3913c2dbfc48] succeeded in 0.03090285905636847s: [b'', b'', 1]
+[2016-12-14 11:28:47,950: INFO/MainProcess] Task ht_celery.tasks.run_command[23a48d9f-12b3-480e-b255-fa156ec9a6e6] succeeded in 3.046154718962498s: [b'', b'', 0]
+[2016-12-14 11:28:47,989: INFO/MainProcess] Task ht_celery.tasks.run_command[d43e82d3-9cd5-46fc-97ee-ad7f74241dc5] succeeded in 0.048045474919490516s: [b'', b'', 1]
+[2016-12-14 11:28:47,993: INFO/MainProcess] Task ht_celery.tasks.run_command[2ed8caef-5bfb-47da-a749-fa4a89aa571e] succeeded in 0.048741727019660175s: [b'', b'', 1]
+[2016-12-14 11:28:48,000: INFO/MainProcess] Task ht_celery.tasks.run_command[12303b74-c34a-4c38-b10f-5645bf4a3202] succeeded in 0.04864686797372997s: [b'', b'', 1]
+[2016-12-14 11:28:48,006: INFO/MainProcess] Task ht_celery.tasks.run_command[e303b533-bb41-4b13-b87c-26dcdac5ce2c] succeeded in 0.05360413296148181s: [b'', b'', 1]
+[2016-12-14 11:28:48,048: INFO/MainProcess] Task ht_celery.tasks.run_command[d14edfa2-b89c-416e-9562-f40de51cb528] succeeded in 0.0403309550601989s: [b'', b'', 1]
+[2016-12-14 11:28:51,048: INFO/MainProcess] Task ht_celery.tasks.run_command[6516c249-461b-4e74-ae89-1577d76df86f] succeeded in 3.05588344798889s: [b'', b'', 0]
+[2016-12-14 11:28:51,051: INFO/MainProcess] Task ht_celery.tasks.run_command[c0c3b605-758f-4193-9b4f-1cbfa1470e0c] succeeded in 3.0564643720863387s: [b'', b'', 0]
+[2016-12-14 11:28:51,055: INFO/MainProcess] Task ht_celery.tasks.run_command[dc8fb398-738b-44b0-8968-56158cbd8856] succeeded in 3.0510588579345495s: [b'', b'', 0]
+[2016-12-14 11:28:54,099: INFO/MainProcess] Task ht_celery.tasks.run_command[ed9acd6b-905a-4fa2-bf00-d46c69ef0310] succeeded in 3.05166741006542s: [b'', b'', 0]
+[2016-12-14 11:28:54,103: INFO/MainProcess] Task ht_celery.tasks.run_command[b75a5b94-c283-43fb-9128-a1544276f006] succeeded in 3.0498495990177616s: [b'', b'', 0]
+[2016-12-14 11:28:54,104: INFO/MainProcess] Task ht_celery.tasks.run_command[803510b0-718f-4723-9e45-1faee2083ef2] succeeded in 3.045981914969161s: [b'', b'', 0]
+[2016-12-14 11:28:54,104: INFO/MainProcess] Task ht_celery.tasks.run_command[ce02fd63-d2c8-405b-8121-218546683376] succeeded in 3.051800052053295s: [b'', b'', 0]

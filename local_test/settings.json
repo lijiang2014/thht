@@ -1,0 +1,1 @@
+{"port": 6379, "job": {"input": "input2.htc", "env": "pass", "autoname": true, "exec": "./simtask.py", "autoworkdir": true}, "workdir": "/home/tonge/WorkStation/virtualenv/thht/local_test", "name": "ht_celery", "queue": {"soft_time_limit": null, "time_limit": null, "default_retry_delay": 0, "retry_exception": true, "max_retries": 2, "rate_limit": null, "retry_retcode": false}}
