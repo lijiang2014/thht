@@ -1,0 +1,45 @@
+[2016-12-14 14:09:38,950: WARNING/MainProcess] /home/tonge/WorkStation/virtualenv/py3env/lib/python3.4/site-packages/celery/apps/worker.py:161: CDeprecationWarning: 
+Starting from version 3.2 Celery will refuse to accept pickle by default.
+
+The pickle serializer is a security concern as it may give attackers
+the ability to execute any command.  It's important to secure
+your broker from unauthorized access when using pickle, so we think
+that enabling pickle should require a deliberate action and not be
+the default choice.
+
+If you depend on pickle then you should set a setting to disable this
+warning and to be sure that everything will continue working
+when you upgrade to Celery 3.2::
+
+    CELERY_ACCEPT_CONTENT = ['pickle', 'json', 'msgpack', 'yaml']
+
+You must only enable the serializers that you will actually use.
+
+
+  warnings.warn(CDeprecationWarning(W_PICKLE_DEPRECATED))
+[2016-12-14 14:09:39,040: INFO/MainProcess] Connected to redis://localhost:6379//
+[2016-12-14 14:09:39,048: INFO/MainProcess] mingle: searching for neighbors
+[2016-12-14 14:09:40,053: INFO/MainProcess] mingle: all alone
+[2016-12-14 14:09:40,064: WARNING/MainProcess] celery@tonge-Dell ready.
+[2016-12-14 14:09:40,066: INFO/MainProcess] Received task: ht_celery.tasks.run_command[843f6b92-600c-4faf-b47a-f219f5159053]
+[2016-12-14 14:09:40,067: INFO/MainProcess] Received task: ht_celery.tasks.run_command[f2783aad-e7a6-403b-81bc-80c7c5ea830b]
+[2016-12-14 14:09:40,068: INFO/MainProcess] Received task: ht_celery.tasks.run_command[5900cab8-2558-4646-bb4d-f0e93e7b134f]
+[2016-12-14 14:09:40,070: INFO/MainProcess] Received task: ht_celery.tasks.run_command[fe6072ba-d042-43e8-9cdb-0563b2969ae5]
+[2016-12-14 14:09:40,074: INFO/MainProcess] Received task: ht_celery.tasks.run_command[3d7eee53-0a12-46b3-ad56-694142829337]
+[2016-12-14 14:09:40,076: INFO/MainProcess] Received task: ht_celery.tasks.run_command[34f70e9e-ef4e-485a-81a1-b4e32e9840cd]
+[2016-12-14 14:09:40,077: INFO/MainProcess] Received task: ht_celery.tasks.run_command[2df96364-950a-4c9d-aed5-278c4b823a0c]
+[2016-12-14 14:09:40,078: INFO/MainProcess] Received task: ht_celery.tasks.run_command[0a56255c-7eb3-41eb-abb8-969f6dc55325]
+[2016-12-14 14:09:40,079: INFO/MainProcess] Received task: ht_celery.tasks.run_command[eb8d0588-7ed5-419a-b085-750dafca2f97]
+[2016-12-14 14:09:40,081: INFO/MainProcess] Received task: ht_celery.tasks.run_command[b86165ba-be16-4022-a57b-8c0bbd8891f8]
+[2016-12-14 14:09:40,082: INFO/MainProcess] Received task: ht_celery.tasks.run_command[6fd807b4-f118-4cd3-825c-3df90d14ba9b]
+[2016-12-14 14:09:40,115: INFO/MainProcess] Task ht_celery.tasks.run_command[843f6b92-600c-4faf-b47a-f219f5159053] succeeded in 0.04749791498761624s: [b'', b'', 1]
+[2016-12-14 14:09:40,115: INFO/MainProcess] Task ht_celery.tasks.run_command[f2783aad-e7a6-403b-81bc-80c7c5ea830b] succeeded in 0.04802382201887667s: [b'', b'', 1]
+[2016-12-14 14:09:40,118: INFO/MainProcess] Task ht_celery.tasks.run_command[fe6072ba-d042-43e8-9cdb-0563b2969ae5] succeeded in 0.0473120209062472s: [b'', b'', 1]
+[2016-12-14 14:09:40,129: INFO/MainProcess] Task ht_celery.tasks.run_command[5900cab8-2558-4646-bb4d-f0e93e7b134f] succeeded in 0.05756883102003485s: [b'', b'', 1]
+[2016-12-14 14:09:40,158: INFO/MainProcess] Task ht_celery.tasks.run_command[3d7eee53-0a12-46b3-ad56-694142829337] succeeded in 0.04215896502137184s: [b'', b'', 244]
+[2016-12-14 14:09:40,180: INFO/MainProcess] Task ht_celery.tasks.run_command[2df96364-950a-4c9d-aed5-278c4b823a0c] succeeded in 0.05217152298428118s: [b'', b'', 1]
+[2016-12-14 14:09:40,182: INFO/MainProcess] Task ht_celery.tasks.run_command[0a56255c-7eb3-41eb-abb8-969f6dc55325] succeeded in 0.05195670900866389s: [b'', b'', 1]
+[2016-12-14 14:09:40,188: INFO/MainProcess] Task ht_celery.tasks.run_command[eb8d0588-7ed5-419a-b085-750dafca2f97] succeeded in 0.02956262801308185s: [b'', b'', 244]
+[2016-12-14 14:09:40,209: INFO/MainProcess] Task ht_celery.tasks.run_command[6fd807b4-f118-4cd3-825c-3df90d14ba9b] succeeded in 0.026961583993397653s: [b'', b'', 1]
+[2016-12-14 14:09:43,157: INFO/MainProcess] Task ht_celery.tasks.run_command[34f70e9e-ef4e-485a-81a1-b4e32e9840cd] succeeded in 3.041400279966183s: [b'', b'', 0]
+[2016-12-14 14:09:43,186: INFO/MainProcess] Task ht_celery.tasks.run_command[b86165ba-be16-4022-a57b-8c0bbd8891f8] succeeded in 0.029317229986190796s: [b'', b'', 1]
