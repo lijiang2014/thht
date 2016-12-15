@@ -1,8 +1,10 @@
 from __future__ import absolute_import , unicode_literals
-from ht_celery.celery import app , settings
+
 import os
-from subprocess import PIPE, Popen
 import signal
+from subprocess import PIPE, Popen
+from ht_celery.HtcTask import HtcTask
+from ht_celery.celery import app , settings
 
 @app.task
 def add(x,y):
@@ -17,7 +19,7 @@ def xsum(numbers):
     return sum(numbers)
 
 
-@app.task(bind = True , autoretry_for=(Exception,) , track_started = True , max_retries = settings["queue"]["max_retries"] , default_retry_delay = 1 )
+@app.task(base=HtcTask, bind = True , autoretry_for=(Exception,) , track_started = True , max_retries = settings["queue"]["max_retries"] , default_retry_delay = 1 )
 def run_command( self , command, env=None, timeout=600  ):
     env_backup = os.environ.copy()
     if settings["job"]["env"] == "bash" : 
@@ -50,9 +52,9 @@ def run_command( self , command, env=None, timeout=600  ):
     #    # do not need time limit any more as the task have one 
     #    os.kill(p.pid, signal.SIGKILL)
     #    raise RuntimeError('command "%s", reached deadline and was terminated' % (command))
-    #if retcode != 0 :  # TO-DO need settings.FLAGS.RETRY.RETCODE
+    if retcode != 0 :  # TO-DO need settings.FLAGS.RETRY.RETCODE
     #    #logger.warning('command "%s", exit: %d <br> %s' % (command, retcode, error))
-    #    raise self.retry(exc = Exception("Exit at code:"  + str(retcode)  ) )
+        raise self.retry(exc = Exception("Exit at code:"  + str(retcode)  ) )
     #return (output.decode( decode ), error.decode( decode  ), retcode)
     return [ output , error , retcode ]
 
