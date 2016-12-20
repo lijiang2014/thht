@@ -1,1 +1,0 @@
-{"queue": {"retry_exception": true, "soft_time_limit": null, "time_limit": null, "retry_retcode": false, "rate_limit": null, "default_retry_delay": 0, "max_retries": 2}, "port": 6379, "workdir": "/home/tonge/WorkStation/virtualenv/thht/local_test", "job": {"autoworkdir": true, "env": "pass", "input": "input2.htc", "exec": "./simtask.py", "autoname": true}, "name": "ht_celery"}
