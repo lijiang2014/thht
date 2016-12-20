@@ -17,8 +17,7 @@ results = []
 path = os.getcwd()
 filename = "task_state"
 pathname = "%s/%s" % (path, filename)
-print path
-print pathname
+print (path, pathname)
 task_list = []
 for line in f :
     if line.strip():
@@ -70,12 +69,12 @@ for fail_task in fail_list:
 keys = ['task_id', 'task_name', 'task_cmd', 'state', 'retval/exc']
 with open(pathname, 'a') as f:
 	for task in task_list:
-		print task
+		print (task)
 		record_items = []
 		record = ''
 		for key in keys:
 			record_items.append(str(task[key]))
 		record_items.append('\n')
 		record = ' '.join(record_items)
-		print record
+		print (record)
 		f.write(record)
