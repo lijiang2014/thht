@@ -1,0 +1,2 @@
+7c5b3d22-503d-4fcd-afac-e243dde61509 1 "./simtask_pytest.py" 1 1 success [b"['./simtask_pytest.py', '1', '1']\n2.6.6 (r266:84292, Sep  4 2013, 07:46:00) \n[GCC 4.4.7 20120313 (Red Hat 4.4.7-3)]\nRun END OK\n", b'', 0] 
+beec05f0-c20a-4594-b3b4-bd916c044249 1 "./simtask_pytest.py" 1 1  &> out.task success [b'', b'', 0] 

@@ -1,5 +1,0 @@
-#EXEC = "./simtask_pytest.py "
-EXEC = /HOME/nscc-gz_jiangli/virtualenv/thht/test/simtask_pytest.py
-INPUT =  input2.htc
-queue.max_retries = 1
-queue.default_retry_delay = 0

@@ -1,5 +1,5 @@
-EXEC = ./simtask.py
-INPUT =  input2.htc
+EXEC = ./ctest
+INPUT =  input.htc
 queue.max_retries = 2
 queue.default_retry_delay = 0
 #job.env = bash

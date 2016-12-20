@@ -1,0 +1,5 @@
+#EXEC = "./simtask_pytest.py "
+EXEC = "./simtask_pytest.py"
+INPUT =  input.htc
+queue.max_retries = 1
+queue.default_retry_delay = 0

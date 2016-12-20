@@ -30,7 +30,7 @@ setting.py
 #echo " srun -N $[ SLURM_NNODES - 1 ] -n $[ SLURM_NNODES - 1 ]  -x $THHT_HOST  "
 #srun -N $[ SLURM_NNODES - 1 ] -n $[ SLURM_NNODES - 1 ]  -x $THHT_HOST celery -A ht_celery worker -l info &> log.worker &
 
-srun -N $[ SLURM_NNODES  ] -n $[ SLURM_NNODES  ]  run_thht_worker.py  # -x $THHT_HOST celery -A ht_celery worker -l info &> log.worker &
+srun -N $[ SLURM_NNODES  ] -n $[ SLURM_NNODES  ] -c 24 run_thht_worker.sh  # -x $THHT_HOST celery -A ht_celery worker -l info &> log.worker &
 
 ## wait
 
