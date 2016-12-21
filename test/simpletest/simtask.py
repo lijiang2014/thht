@@ -3,8 +3,8 @@ import time
 import random
 import sys
 error_r = 0.1  # return code not 0
-error_exception = 0.5  # raise Exception
-time_run = 3     
+error_exception = 0.8  # raise Exception
+time_run = 1     
 taskrad = random.random()
 print (str(sys.argv))
 if len( sys.argv ) > 1  and sys.argv[1] == 'e' : # case always error . 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 import os
 loopFrom = 0
-loopNum =  10
+loopNum =  100
 setName =  True
 NamePre = "test"
 argStr  = " 1 2 3 "

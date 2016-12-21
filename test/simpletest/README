@@ -1,0 +1,9 @@
+```
+./tesh.sh
+```
+
+
+after work done , run ``` ./check.sh ``` to see how many works success .
+
+U can change settings.htc to test more . 
+

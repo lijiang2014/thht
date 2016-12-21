@@ -117,7 +117,7 @@ supervised no
 pidfile %s
 save 900 1
 save 300 10
-save 60 10000
+save 60 100000
 stop-writes-on-bgsave-error yes
 rdbcompression yes
 dbfilename dump.rdb
