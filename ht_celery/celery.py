@@ -1,10 +1,9 @@
 from __future__ import absolute_import ,unicode_literals
 
 import os
-
+import json
+import redis
 from celery import Celery, Task
-import redis , json
-
 
 thht_port = int( os.getenv( "THHT_PORT", 6379  ) )
 thht_host = os.getenv( "THHT_HOST", None  )

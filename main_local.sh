@@ -47,7 +47,7 @@ celery -A ht_celery worker -l info &> log.worker &
 ### sleep $TIME_LIMITE 
 
 ## EXITS 
-killall -9 redis-server &> /dev/null
+#killall -9 redis-server &> /dev/null
 killall -9 celery &> /dev/null
 killall -9 python3 &> /dev/null
 date
