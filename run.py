@@ -5,6 +5,9 @@ from celery import group
 from ht_celery.tasks import run_command
 from celery.result import ResultSet
 import os , time
+ISOTIMEFORMAT='%Y-%m-%d %X'
+print('run.py')
+print( time.strftime( ISOTIMEFORMAT, time.localtime() ) )
 USE_NAME = True
 thht_port = int( os.getenv( "THHT_PORT", 6379  ) )
 thht_host = os.getenv( "THHT_HOST", None  )
@@ -33,7 +36,10 @@ for line in f :
         task_info['task_id'] = rest.task_id
         r.lpush('tasks_info', task_info)
 r.set( "thht_state" , "ALL PUSHED" )
-print( "set " , r.get( "thht_state" ))
+print( "set " , r.get( "thht_state" ) , "time : " , time.strftime( ISOTIMEFORMAT, time.localtime() ) )
+print( "len tasks info" ,     r.llen('tasks_info'))
+
+
 #rs = ResultSet( results )
 
 #print( rs.get( propagate = False ) ) 

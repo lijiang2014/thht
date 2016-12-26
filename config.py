@@ -89,7 +89,7 @@ else : # No SETTINGS FILE
     settings["job"]["input"] = os.getenv( "THHT_INPUT", "input.htc"  )
 
 # 
-
+settings["job"]["host"]  = os.getenv("THHT_HOST" , socket.gethostname() )
 # write settings to json file 
 
 with open( "settings.json" , "w" ) as outfile :
@@ -105,14 +105,14 @@ with open( "settings.json" , "w" ) as outfile :
 redis_config_str = '''
 bind %s  
 # redis ip
-protected-mode yes  
+#protected-mode yes  
 # 
 port %s 
 # port default 6379
 timeout 0
 tcp-keepalive 300
 daemonize no
-supervised no
+#supervised no
 #pidfile /var/run/redis_6379.pid
 pidfile %s
 save 900 1
@@ -127,7 +127,7 @@ slave-serve-stale-data yes
 # 
 '''
 
-redis_config = redis_config_str %  ( socket.gethostname()  , settings["port"] , settings["workdir"] +'/redis.pid' ) 
+redis_config = redis_config_str %  ( settings["job"]["host"]  , settings["port"] , settings["workdir"] +'/redis.pid' ) 
 
 f = open( 'redis.conf' , 'w' )
 f.write( redis_config )

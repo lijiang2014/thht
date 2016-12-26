@@ -15,7 +15,7 @@ export OLD_LD_LIBRARY_PATH=$LD_LIBRARY_PATH
 export OLDPYTHONPATH=$PYTHONPATH
 export PATH=$THHT_PYTHON_PATH:$THHT_PACKAGE_PATH:$PATH
 export LD_LIBRARY_PATH=$THHT_PYTHON_LIB:$LD_LIBRARY_PATH
-export PYTHONPATH=$THHT_PACKAGE_PATH:$PYTHONPATH
+export PYTHONPATH=$THHT_PACKAGE_PATH
 ######################################
 
 
@@ -23,31 +23,36 @@ export PYTHONPATH=$THHT_PACKAGE_PATH:$PYTHONPATH
 config.py $@
 echo "THHT MSG: Config redis OK ."
 # run redis-server 
-# nohup $THHT_REDIS_PATH/redis-server ./redis.conf &> log.redis &
+nohup $THHT_REDIS_PATH/redis-server ./redis.conf &> log.redis &
 ###  check the redis-server is OK and put the settings into redis .
 sleep 1 
 setting.py
 
- 
-#srun -N $SLURM_NNODES -n $SLURM_NNODES  
+
+if [ s$THHT_LOCAL_DEBUG = s ] ; then
+
+srun -N $[ SLURM_NNODES  ] -n $[ SLURM_NNODES  ] -c 24 --no-kill -W 9999999 run_thht_worker.sh &  # -x $THHT_HOST celery -A ht_celery worker -l info &> log.worker &
+else 
 
 celery -A ht_celery worker -l info &> log.worker &
 
+fi
 ## wait
 
 ## PUT JOB INTO QUEUE 
 #sleep 10
 
-  run.py  &> log.run
+run.py  &> log.run &
+
+monitor.py
 
 #wait 
-#sleep 10000
 
 ## WAIT TASK RUN
 ### sleep $TIME_LIMITE 
 
 ## EXITS 
-#killall -9 redis-server &> /dev/null
+killall -9 redis-server &> /dev/null
 killall -9 celery &> /dev/null
 killall -9 python3 &> /dev/null
 date

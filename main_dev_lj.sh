@@ -37,11 +37,11 @@ srun -N $[ SLURM_NNODES  ] -n $[ SLURM_NNODES  ] -c 24 --no-kill -W 9999999 run_
 ## PUT JOB INTO QUEUE 
 #sleep 10
 
-#run.py  
-run_dev_lj.py
+run.py  &> log.run &
+
+monitor.py
 
 #wait 
-#sleep 10000
 
 ## WAIT TASK RUN
 ### sleep $TIME_LIMITE 
