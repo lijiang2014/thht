@@ -1,4 +1,4 @@
-#!/bash/python
+#!/usr/bin/env python
 
 import os
 import sys
@@ -26,7 +26,7 @@ def format_print(task_info):
 
 if __name__ == '__main__':
     rdb_path = 'rdb'
-    dump_path = 'local_test/dump.rdb'
+    dump_path = './dump.rdb'
     # check .rdb file exist
     if os.path.exists(dump_path) != True:
         print "%s not exists" % dump_path

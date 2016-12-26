@@ -35,10 +35,11 @@ srun -N $SLURM_NNODES -n $SLURM_NNODES  celery -A ht_celery worker -l info &> lo
 ## PUT JOB INTO QUEUE 
 #sleep 10
 
-  run.py  &> log.run
+run.py  &> log.run &
+
+monitor.py
 
 #wait 
-#sleep 10000
 
 ## WAIT TASK RUN
 ### sleep $TIME_LIMITE 

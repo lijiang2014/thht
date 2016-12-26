@@ -52,9 +52,9 @@ def run_command( self , command, env=None, timeout=600  ):
     #    # do not need time limit any more as the task have one 
     #    os.kill(p.pid, signal.SIGKILL)
     #    raise RuntimeError('command "%s", reached deadline and was terminated' % (command))
-    # if retcode != 0 :  # TO-DO need settings.FLAGS.RETRY.RETCODE
-    #    #logger.warning('command "%s", exit: %d <br> %s' % (command, retcode, error))
-    #    raise self.retry(exc = Exception("Exit at code:"  + str(retcode)  ) )
+    if retcode != 0 :  # TO-DO need settings.FLAGS.RETRY.RETCODE
+        #logger.warning('command "%s", exit: %d <br> %s' % (command, retcode, error))
+        raise self.retry(exc = Exception("Exit at code:"  + str(retcode) + ";" + error.decode('utf-8') ) )
     #return (output.decode( decode ), error.decode( decode  ), retcode)
-    return [ output , error , retcode ]
+    return [  retcode ]
 
