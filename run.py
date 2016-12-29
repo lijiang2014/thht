@@ -34,8 +34,15 @@ for line in f :
         task_info['task_name'] = tname
         task_info['task_cmd'] = cmd
         task_info['task_id'] = rest.task_id
-        r.lpush('tasks_info', task_info)
-r.set( "thht_state" , "ALL PUSHED" )
+        #r.lpush('tasks_info', task_info)
+        r.hmset( 'thht_id_name' , { rest.task_id : tname } )
+        r.hmset( 'thht_id_info' , { rest.task_id : task_info })
+		# may need to check tname uniq
+        r.hmset( 'thht_name_id' , {tname : rest.task_id} )
+thht_run_level = int(os.getenv( "THHT_RUN_LEVEL", 0  ))
+print( "all job from file pushed" )
+if thht_run_level == 0 :
+    r.set( "thht_state" , "ALL PUSHED" )
 print( "set " , r.get( "thht_state" ) , "time : " , time.strftime( ISOTIMEFORMAT, time.localtime() ) )
 print( "len tasks info" ,     r.llen('tasks_info'))
 

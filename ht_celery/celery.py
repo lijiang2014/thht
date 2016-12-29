@@ -25,8 +25,8 @@ app = Celery('ht_celery' ,
 
 app.conf.update(
     result_expires = 3600 ,
-    result_serializer = "pickle" , 
-    accept_content = ['pickle' , 'json']
+#    result_serializer = "pickle" , 
+#    accept_content = ['pickle' , 'json']
 )
 
 if __name__ == '__main__':

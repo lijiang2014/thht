@@ -20,13 +20,15 @@ while  True :
         if isAllPushed  :
             print( "All Pushed" )
         #print( 'thht_state ' , (r.get( "thht_state" ).decode('utf-8')))  
-    aln = r.llen('tasks_info')
+    aln = r.hlen('thht_id_name')
     if (( aln == (sln + fln)  ) and  aln >0 and isAllPushed is True ) :
         print('End?a , s, f, is ' , aln , sln , fln , isAllPushed  )
         break
+    if ( r.get("thht_kill") == b"KILL" ) :
+        break
     time.sleep( 1  )
     
-print( 'A :', r.llen('tasks_info'))
+print( 'A :', r.hlen('thht_id_name'))
 print( 'S :', r.llen('success_list') )
 print( 'F :', r.llen('fail_list'))
 print( 'R :', r.llen('retry_list'))

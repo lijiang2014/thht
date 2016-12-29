@@ -2,10 +2,11 @@
 import time
 import random
 import sys
-error_r = 0.1  # return code not 0
-error_exception = 0.8  # raise Exception
-time_run = 1     
+error_r = 0.0  # return code not 0
+error_exception = 0.0  # raise Exception
+time_run = 30
 taskrad = random.random()
+time.sleep( 1 )
 print (str(sys.argv))
 if len( sys.argv ) > 1  and sys.argv[1] == 'e' : # case always error . 
     print('Error case ')

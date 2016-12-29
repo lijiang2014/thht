@@ -6,6 +6,13 @@ from subprocess import PIPE, Popen
 from ht_celery.HtcTask import HtcTask
 from ht_celery.celery import app , settings
 
+
+class ExceptionReturn ( Exception) :
+    def __init__(self,value):
+        self.value = value
+    def __str__(self):
+        return repr(self.value)
+
 @app.task
 def add(x,y):
     return x + y
@@ -35,7 +42,6 @@ def run_command( self , command, env=None, timeout=600  ):
     try:
         p = Popen(args, stdout=PIPE, stderr=PIPE, env=env)
     except OSError as  ex:
-        #logger.error('running command failed: "%s", OSError "%s"' %(' '.join(args), ex))
         raise self.retry( exc = ex )
     output = ""
     error = ""
@@ -45,16 +51,13 @@ def run_command( self , command, env=None, timeout=600  ):
         (output, error) = p.communicate()
         retcode=p.poll()
         signal.alarm(0)  # reset the alarm
-    except Exception as ex :
-        self.retry(exc= ex )
-    #except Alarm:
-    #    #logger.error('command "%s", reached deadline try to terminate' % (command)) 
-    #    # do not need time limit any more as the task have one 
-    #    os.kill(p.pid, signal.SIGKILL)
-    #    raise RuntimeError('command "%s", reached deadline and was terminated' % (command))
+    except Exception as exc :
+        raise exc
     if retcode != 0 :  # TO-DO need settings.FLAGS.RETRY.RETCODE
-        #logger.warning('command "%s", exit: %d <br> %s' % (command, retcode, error))
-        raise self.retry(exc = Exception("Exit at code:"  + str(retcode) + ";" + error.decode('utf-8') ) )
-    #return (output.decode( decode ), error.decode( decode  ), retcode)
+        raise ExceptionReturn('Error:%s;%s'%(str(retcode) , error.decode('utf-8')))
+        #try :
+        #    pass
+        #    raise ExceptionReturn('Error:%s;%s'%(str(retcode) , error.decode('utf-8')))
+        #except Exception as ex :
+        #   raise self.retry( exc=ex   )
     return [  retcode ]
-
