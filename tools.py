@@ -1,13 +1,16 @@
 #!/usr/bin/env python
 from __future__ import absolute_import , unicode_literals
-
 import os
 import sys
 import json , redis 
 from getopt import getopt, GetoptError
 from subprocess import Popen, PIPE
 from celery.result import AsyncResult
-from ht_celery.celery import app
+#from .monitor import Monitor
+try :
+    from ht_celery.celery import app
+except Exception as ex :
+    pass
 
 class Client(object):
     def __init__(self):
@@ -47,6 +50,10 @@ class Client(object):
             result = r.lrange('success_list' , 0 , -1)
             if isHum :
                 result = self.get_name_by_id( result  , encode = None)
+        else :
+            with open( ".log.thht.S" ) as file :
+                result = file.read()
+            #result = "try to read .log file"
         return result
     def failure(self ,isHum=False ):
         if self.state == "net" :
@@ -55,7 +62,7 @@ class Client(object):
             if isHum :
                 result = self.get_name_by_id( result  , encode = None)
             return result
-    def pd(self):
+    def pd(self ,isHum=False):
         if self.state == "net" :
             result = self.r.llen('celery')
         return result
@@ -144,10 +151,6 @@ class Client(object):
         return result
     def job_name(self , name):
         print("Not Imp Yet")
-
-
-
-
 
 
 def usage():

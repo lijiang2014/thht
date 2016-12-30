@@ -13,7 +13,7 @@ thht_port = int( os.getenv( "THHT_PORT", 6379  ) )
 thht_host = os.getenv( "THHT_HOST", None  )
 r = redis.Redis( host= thht_host , port = thht_port ) 
 r.set( "thht_state" , "STARTE" )
-settings = json.loads( r.get('htth-settings'  ).decode('utf-8') ) 
+settings = json.loads( r.get('thht_settings''  ).decode('utf-8') ) 
 EXEC = settings["job"]["exec"] 
 f = open( settings["job"]["input"] , "r")
 results = []

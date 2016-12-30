@@ -10,7 +10,7 @@ thht_host = os.getenv( "THHT_HOST", None  )
 if not thht_host :
     raise Exception("Error: No THHT_HOST SET")
 r = redis.Redis( host= thht_host , port = thht_port ) 
-settings = json.loads( r.get('htth-settings'  ).decode('utf-8') ) 
+settings = json.loads( r.get('thht_settings'  ).decode('utf-8') ) 
 
 
 masterip = os.environ["THHT_HOST"]

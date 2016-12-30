@@ -4,7 +4,7 @@ import random
 import sys
 error_r = 0.0  # return code not 0
 error_exception = 0.0  # raise Exception
-time_run = 30
+time_run = 3
 taskrad = random.random()
 time.sleep( 1 )
 print (str(sys.argv))
