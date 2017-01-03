@@ -270,6 +270,8 @@ if __name__ == '__main__':
                     if argv == None:
                         print ("invalid task name")
                         exit(1)
+                    data = c.revoke_task(argv)
+                    format_print(data)
                 else:
                     pass
     except GetoptError:
