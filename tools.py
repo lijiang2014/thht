@@ -6,6 +6,7 @@ import json , redis
 from getopt import getopt, GetoptError
 from subprocess import Popen, PIPE
 from celery.result import AsyncResult
+from ht_celery.tasks import run_command
 #from .monitor import Monitor
 try :
     from ht_celery.celery import app
@@ -152,28 +153,42 @@ class Client(object):
     def job_name(self , name):
         print("Not Imp Yet")
 
-    def revoke_task(self, task_name):
-        # get task_name mapping id
-        task_id = self.r.hget("thht_name_id", task_name);
-        if task_id == None:
-            result = "task name error"
+    def revoke_job(self, job_name):
+        # get job_name mapping id
+        job_id = self.r.hget("thht_name_id", job_name);
+        if job_id == None:
+            result = "job name error"
         else:
-            if task_id in self.r.lrange("success_list", 0, -1):
-                result = "task %s has already finished" % task_name
+            if job_id in self.r.lrange("success_list", 0, -1):
+                result = "job %s has already finished" % job_name
             else:
-                # revoke task by task id
-                app.control.revoke(task_id)
-                # record revoked task info
-                revoked_task = self.r.hget('thht_id_info', task_id)
-                self.r.lpush("revoke_list", revoked)
+                # revoke job by job id
+                app.control.revoke(job_id)
+                # record revoked job info
+                revoked_job = self.r.hget('thht_id_info', job_id)
+                self.r.lpush("revoke_list", revoked_job)
                 # "eliminate" the task imprint
-                self.r.lrem('fail_list', task_id)
-                self.r.lrem('retry_list', task_id)
-                self.r.hdel('thht_id_name', task_id)
-                self.r.hdel('thht_id_info', task_id)
-                self.r.hdel('thht_id_pd', task_id)
-                result = "task %s has been revoked" % task_name
+                self.r.lrem('fail_list', job_id)
+                self.r.lrem('retry_list', job_id)
+                self.r.hdel('thht_id_name', job_id)
+                self.r.hdel('thht_id_info', job_id)
+                self.r.hdel('thht_id_pd', job_id)
+                result = "job %s has been revoked" % job_name
         return result
+
+    def append_job(self, job_name, job_cmd):
+        if job_name && job_cmd:
+            result = run_command.delay(job_cmd)
+            task_info = {}
+            task_info['task_name'] = job_name
+            task_info['task_cmd'] = cmd
+            task_info['task_id'] = result.task_id
+            task_info = json.dumps(task_info)
+            self.r.hmset( 'thht_id_name' , { result.task_id : job_name } )
+            self.r.hmset( 'thht_id_info' , { result.task_id : task_info })
+            self.r.hmset( 'thht_name_id' , {job_name : result.task_id} )
+            self.r.hmset( 'thht_id_pd' , { result.task_id : 'pd' })
+            return_result = "add new job success"
 
 
 def usage():
@@ -224,7 +239,7 @@ def format_print( data , summ = True , isHum = False , indence = 2 ):
 if __name__ == '__main__':
     c = Client()
     try:
-        opts, args = getopt(sys.argv[1:], "hn:sekrv:SRPFEH", ["task_name=", "help" , "summary","end", "Success" ,"Running", "Pendding", "Failure", "kill","Error"] )
+        opts, args = getopt(sys.argv[1:], "a:hn:sekrv:SRPFEH", ["task_name=", "help" , "summary","end", "Success" ,"Running", "Pendding", "Failure", "kill","Error"] )
         if len(opts) == 0:
             print ('Not Imp Yet')
         else:
@@ -268,10 +283,17 @@ if __name__ == '__main__':
                     format_print( data , isHum= isHum )
                 elif opt in ('-v', '--revoke'):
                     if argv == None:
-                        print ("invalid task name")
+                        print ("invalid job name")
                         exit(1)
-                    data = c.revoke_task(argv)
+                    data = c.revoke_job(argv)
                     format_print(data)
+                elif opt in ('-a', '--append'):
+                    (job_name, job_cmd) = argv.strip().split(' ', 1)
+                    if job_name && job_cmd:
+                        c.append_job(job_name, job_cmd)
+                    else:
+                        print ("invalid job info")
+                        usage()
                 else:
                     pass
     except GetoptError:
