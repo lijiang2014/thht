@@ -152,6 +152,29 @@ class Client(object):
     def job_name(self , name):
         print("Not Imp Yet")
 
+    def revoke_task(self, task_name):
+        # get task_name mapping id
+        task_id = self.r.hget("thht_name_id", task_name);
+        if task_id == None:
+            result = "task name error"
+        else:
+            if task_id in self.r.lrange("success_list", 0, -1):
+                result = "task %s has already finished" % task_name
+            else:
+                # revoke task by task id
+                app.control.revoke(task_id)
+                # record revoked task info
+                revoked_task = self.r.hget('thht_id_info', task_id)
+                self.r.lpush("revoke_list", revoked)
+                # "eliminate" the task imprint
+                self.r.lrem('fail_list', task_id)
+                self.r.lrem('retry_list', task_id)
+                self.r.hdel('thht_id_name', task_id)
+                self.r.hdel('thht_id_info', task_id)
+                self.r.hdel('thht_id_pd', task_id)
+                result = "task %s has been revoked" % task_name
+        return result
+
 
 def usage():
     print ('''usage:      analysize [-n|-h|-e]
@@ -201,7 +224,7 @@ def format_print( data , summ = True , isHum = False , indence = 2 ):
 if __name__ == '__main__':
     c = Client()
     try:
-        opts, args = getopt(sys.argv[1:], "hn:sekrSRPFEH", ["task_name=", "help" , "summary","end", "Success" ,"Running", "Pendding", "Failure", "kill","Error"] )
+        opts, args = getopt(sys.argv[1:], "hn:sekrv:SRPFEH", ["task_name=", "help" , "summary","end", "Success" ,"Running", "Pendding", "Failure", "kill","Error"] )
         if len(opts) == 0:
             print ('Not Imp Yet')
         else:
@@ -243,6 +266,10 @@ if __name__ == '__main__':
                     print( "Task info (-n) :" )
                     data = c.task_name( argv)
                     format_print( data , isHum= isHum )
+                elif opt in ('-v', '--revoke'):
+                    if argv == None:
+                        print ("invalid task name")
+                        exit(1)
                 else:
                     pass
     except GetoptError:
