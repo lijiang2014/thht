@@ -155,7 +155,8 @@ class Client(object):
 
     def revoke_job(self, job_name):
         # get job_name mapping id
-        job_id = self.r.hget("thht_name_id", job_name);
+        job_id = self.r.hget("thht_name_id", job_name).decode('UTF-8');
+        print (job_id)
         if job_id == None:
             result = "job name error"
         else:
@@ -177,11 +178,11 @@ class Client(object):
         return result
 
     def append_job(self, job_name, job_cmd):
-        if job_name && job_cmd:
+        if job_name and job_cmd:
             result = run_command.delay(job_cmd)
             task_info = {}
             task_info['task_name'] = job_name
-            task_info['task_cmd'] = cmd
+            task_info['task_cmd'] = job_cmd
             task_info['task_id'] = result.task_id
             task_info = json.dumps(task_info)
             self.r.hmset( 'thht_id_name' , { result.task_id : job_name } )
@@ -289,7 +290,7 @@ if __name__ == '__main__':
                     format_print(data)
                 elif opt in ('-a', '--append'):
                     (job_name, job_cmd) = argv.strip().split(' ', 1)
-                    if job_name && job_cmd:
+                    if job_name and job_cmd:
                         c.append_job(job_name, job_cmd)
                     else:
                         print ("invalid job info")
