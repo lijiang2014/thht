@@ -6,14 +6,15 @@ import json , redis
 from getopt import getopt, GetoptError
 from subprocess import Popen, PIPE
 from celery.result import AsyncResult
-from ht_celery.tasks import run_command
 #from .monitor import Monitor
 try :
     from ht_celery.celery import app
-except Exception as ex :
+    from ht_celery.tasks import run_command
+except redis.exceptions.ConnectionError as ex :
     pass
 
 class Client(object):
+
     def __init__(self):
         with open("settings.json") as infile :
             settings = json.load(infile)
@@ -29,21 +30,43 @@ class Client(object):
         self._summary = None
         self._thht_id_name = {}
         self._thht_name_id = {}
+        self.workpath = ''
+        self.success_file = '.log.thht.S'
+        self.fail_file = '.log.thht.F'
+        self.errlog_file = '.log.thht.E'
     def end(self):
         self.r.set( "thht_state" , "ALL PUSHED" )
     def kill(self):
         self.r.set( "thht_kill" , "KILL" )
     def summary(self , retry = False ) :
-        if self.state == "net" :
+        self._get_running_state()
+        if self.state == 'net' :
             r = self.r
             result = {
                 'tasks' : r.hlen('thht_id_name') ,
                 'success' : r.llen('success_list' ) ,
                 'failure' : r.llen('fail_list') ,
-            #    'retry'   : r.llen('retry_list') 
+                'retry'   : r.llen('retry_list') 
             }
-            if retry :
-                result["retry"] = r.llen('retry_list')
+        elif self.state == 'file':
+            try:
+                with open(self.success_file, 'r') as fs, \
+                    open(self.fail_file, 'r') as ff, \
+                    open(self.errlog_file, 'r') as fe:
+                    success_num = sum(1 for x in fs)
+                    fail_num = sum(1 for x in ff)
+                    error_num = sum(1 for x in fe)
+                    result = {
+                        'tasks': success_num + fail_num,
+                        'success': success_num,
+                        'failure': fail_num,
+                        'retry': error_num - fail_num
+                    }
+            except IOError as fileErr:
+                print (fileErr)
+                result = {}
+        else:
+            result = {}
         return result
     def success(self , isHum=False ):
         if self.state == "net" :
@@ -98,9 +121,9 @@ class Client(object):
                 name = self._thht_id_name[ id.encode('utf-8')  ]
             return name
     def task_name(self , name) :
+        result = {}
         if self.state == "net" :
             id = self.r.hget('thht_name_id', name)
-            result = {}
             self.all()
             status = "unkown"
             info = ""
@@ -114,6 +137,24 @@ class Client(object):
             result["id"] = id
             result["status"] = status
             result["info"] = info
+        elif self.state == 'file':
+            with open(self.success_file, 'r') as fs, open(self.fail_file, 'r') as ff:
+                for success_info in fs:
+                    success_info_list = success_info.strip().split(' ')
+                    if(name == success_info_list[1]):
+                        result['id'] = success_info[0]
+                        result['status'] = 'SUCCESS'
+                        result['info'] = ''
+                        return result
+                for fail_info in ff:
+                    fail_info_list = fail_info.strip().split(' ')
+                    if(name == fail_info_list[1]):
+                        result['id'] = fail_info[0]
+                        result['status'] = 'FAILURE'
+                        result['info'] = ''
+                        return result
+        else:
+            pass
         return result
     def all(self , retry = False ):
         if self.state == "net" :
@@ -156,7 +197,6 @@ class Client(object):
     def revoke_job(self, job_name):
         # get job_name mapping id
         job_id = self.r.hget("thht_name_id", job_name).decode('UTF-8');
-        print (job_id)
         if job_id == None:
             result = "job name error"
         else:
@@ -190,6 +230,13 @@ class Client(object):
             self.r.hmset( 'thht_name_id' , {job_name : result.task_id} )
             self.r.hmset( 'thht_id_pd' , { result.task_id : 'pd' })
             return_result = "add new job success"
+
+    def _get_running_state(self):
+        try:
+            self.r.client_getname()
+            self.state = 'net' 
+        except redis.exceptions.ConnectionError:
+            self.state = 'file'
 
 
 def usage():

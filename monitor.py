@@ -24,24 +24,24 @@ class Monitor(object) :
     def update(self):
         new_len = self.r.llen(Monitor.SUCCESS_LIST)
         if new_len > self._num_s :
-            with open( self.file_success , 'ab+') as fs:
+            with open( self.file_success , 'a+') as fs:
                 for index in range( new_len - self._num_s ):
                     rindex = -1 - index - self._num_s
-                    rid = self.r.lindex(Monitor.SUCCESS_LIST, rindex )
+                    rid = self.r.lindex(Monitor.SUCCESS_LIST, rindex ).decode('UTF-8')
                     rname = self.get_name_from_id( rid )
                     new_line = "%s %s\n" %(rid, rname)
-                    fs.write(bytes(new_line, 'UTF-8'))
+                    fs.write(new_line)
                 fs.flush()
                 self._num_s = new_len
 
         new_len = self.r.llen(Monitor.FAIL_LIST)
         if new_len > self._num_f:
-            with open( self.file_failure , 'ab+') as ff:
+            with open( self.file_failure , 'a+') as ff:
                 for index in range(new_len - self._num_f):
-                    rid = self.r.lindex(Monitor.FAIL_LIST, index)
+                    rid = self.r.lindex(Monitor.FAIL_LIST, index).decode('UTF-8')
                     rname = self.get_name_from_id(rid)
                     new_line = "%s %s\n" % (rid, rname)
-                    ff.write(bytes(new_line, 'UTF-8'))
+                    ff.write(new_line)
                 ff.flush()
                 self._num_f = new_len
 
@@ -49,11 +49,11 @@ class Monitor(object) :
         if new_len > self._num_e:
             with open( self.file_error , 'ab+') as fe:
                 for index in range(new_len - self._num_e):
-                    errinfo = eval(self.r.lindex(Monitor.ERRLOG_LIST, index))
+                    errinfo = eval(self.r.lindex(Monitor.ERRLOG_LIST, index).decode('UTF-8'))
                     try:
                         rname = self.get_name_from_id(errinfo['task_id'])
                         new_line = "%s %s %s %s %s\n" %(errinfo['task_id'], rname, \
-                                    errinfo['date'], errinfo['host'], errinfo['exc'])
+                                    errinfo['date'], errinfo['host'], eval(errinfo['exc']))
                         fe.write(bytes(new_line, 'UTF-8'))
                     except KeyError:
                         print ("err log mapping error")
@@ -61,7 +61,7 @@ class Monitor(object) :
                 self._num_e = new_len
 
     def get_name_from_id(self, rid ) :
-        name =  self.r.hget('thht_id_name' , rid)
+        name =  self.r.hget('thht_id_name' , rid).decode('UTF-8')
         return name       
         
     def getnum( self , fp ):
