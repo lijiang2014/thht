@@ -6,6 +6,9 @@ import os , time , sys
     
 class Monitor(object) :
     file_success = '.log.thht.S'
+    SUCCESS_LIST = 'success_list'
+    FAIL_LIST = 'fail_list'
+    ERRLOG_LIST = 'err_log'
     def __init__(self , host , port ):
         self.r = redis.Redis( host= host , port = port )
         self.file_success = '.log.thht.S'
@@ -19,23 +22,47 @@ class Monitor(object) :
         self._num_f = self.getnum( self._ff )
         self._isAllPushed = False
     def update(self):
-        pass
-        new_len = self.r.llen('success_list' )
-        endl = '\n'.encode('utf-8')
-        sp = ' '.encode('utf-8')
+        new_len = self.r.llen(Monitor.SUCCESS_LIST)
         if new_len > self._num_s :
-            for index in range( new_len - self._num_s ):
-                rindex = -1 - index - self._num_s
-                rid = self.r.lindex('success_list', rindex )
-                rname = self.get_name_from_id( rid )
-                self._fs.write(   rid + sp + rname +  endl )
-            self._fs.flush()
-            self._num_s = new_len
+            with open( self.file_success , 'ab+') as fs:
+                for index in range( new_len - self._num_s ):
+                    rindex = -1 - index - self._num_s
+                    rid = self.r.lindex(Monitor.SUCCESS_LIST, rindex )
+                    rname = self.get_name_from_id( rid )
+                    new_line = "%s %s\n" %(rid, rname)
+                    fs.write(bytes(new_line, 'UTF-8'))
+                fs.flush()
+                self._num_s = new_len
+
+        new_len = self.r.llen(Monitor.FAIL_LIST)
+        if new_len > self._num_f:
+            with open( self.file_failure , 'ab+') as ff:
+                for index in range(new_len - self._num_f):
+                    rid = self.r.lindex(Monitor.FAIL_LIST, index)
+                    rname = self.get_name_from_id(rid)
+                    new_line = "%s %s\n" % (rid, rname)
+                    ff.write(bytes(new_line, 'UTF-8'))
+                ff.flush()
+                self._num_f = new_len
+
+        new_len = self.r.llen(Monitor.ERRLOG_LIST)
+        if new_len > self._num_e:
+            with open( self.file_error , 'ab+') as fe:
+                for index in range(new_len - self._num_e):
+                    errinfo = eval(self.r.lindex(Monitor.ERRLOG_LIST, index))
+                    try:
+                        rname = self.get_name_from_id(errinfo['task_id'])
+                        new_line = "%s %s %s %s %s\n" %(errinfo['task_id'], rname, \
+                                    errinfo['date'], errinfo['host'], errinfo['exc'])
+                        fe.write(bytes(new_line, 'UTF-8'))
+                    except KeyError:
+                        print ("err log mapping error")
+                fe.flush()
+                self._num_e = new_len
+
     def get_name_from_id(self, rid ) :
         name =  self.r.hget('thht_id_name' , rid)
-        return name
-                
-            
+        return name       
         
     def getnum( self , fp ):
         def block(file , size = 65536) :
