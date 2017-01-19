@@ -9,10 +9,10 @@ fi
 if [ s$myhost != s$THHT_HOST ] ; then
  #  echo "OK"
  #  celery -A ht_celery worker --autoscale=24,1  -l info &> log.worker.$myhost &
- celery -A ht_celery worker --concurrency=$THHT_NODE_WORKER  -l info &> log.worker.$myhost 
+ celery -A ht_celery worker --concurrency=$THHT_NODE_WORKER  -Ofair  -l info &> log.worker.$myhost 
 else
-  if [ $THHT_HOST_WORKER -lt 0 ] ; then
-   celery -A ht_celery worker --concurrency=$THHT_HOST_WORKER  -l info &> log.worker.$myhost
+  if [ $THHT_HOST_WORKER -gt 0 ] ; then
+   celery -A ht_celery worker --concurrency=$THHT_HOST_WORKER  -Ofair   -l info &> log.worker.$myhost
   fi
 fi
 
