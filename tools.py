@@ -14,20 +14,27 @@ except Exception as ex :
 
 class Client(object):
     def __init__(self):
-        with open("settings.json") as infile :
+        try :
+            infile = open("settings.json")
             settings = json.load(infile)
             r =  redis.Redis( host= settings['job']['host'] , port = settings['port'] )
-        try :
-            r.client_getname()
-            state = "net"
-        except Exception as ex :
-            state = "file"
+            os.environ["THHT_HOST"]=settings['job']['host']
+            try : 
+                r.client_getname()
+                state = "net"
+            except Exception as ex :
+                state = "file"
+        except FileNotFoundError as ex :
+            state = "none"
+            r = None
         self.state = state
         self.r = r
         self._all = None
         self._summary = None
         self._thht_id_name = {}
         self._thht_name_id = {}
+    def check(self) :
+        return self.state
     def end(self):
         self.r.set( "thht_state" , "ALL PUSHED" )
     def kill(self):
@@ -43,6 +50,12 @@ class Client(object):
             }
             if retry :
                 result["retry"] = r.llen('retry_list')
+        else :
+            result = {
+                "tasks" : "TO-DO",
+                "success" : "TO-DO",
+                "failure" : "TO-DO" , 
+            }
         return result
     def success(self , isHum=False ):
         if self.state == "net" :
@@ -201,16 +214,18 @@ def format_print( data , summ = True , isHum = False , indence = 2 ):
 if __name__ == '__main__':
     c = Client()
     try:
-        opts, args = getopt(sys.argv[1:], "hn:sekrSRPFEH", ["task_name=", "help" , "summary","end", "Success" ,"Running", "Pendding", "Failure", "kill","Error"] )
+        opts, args = getopt(sys.argv[1:], "chn:sekrSRPFEH", ["check","task_name=", "help" , "summary","end", "Success" ,"Running", "Pendding", "Failure", "kill","Error"] )
         if len(opts) == 0:
             print ('Not Imp Yet')
         else:
             isretry = ('-r','') in opts
             isHum = ('-H','') in opts
             for opt, argv in opts:
-                print( 'o ,a :' , opt , argv)
+                #print( 'o ,a :' , opt , argv)
                 if opt in ('-h', "--help"):
                     usage()
+                elif opt in ('-c', "--check"):
+                    print( c.check() )
                 elif opt in ('-s', "--summary"):
                     print( "Summary (-s) :" )
                     data = ( c.summary( retry = isretry ) )

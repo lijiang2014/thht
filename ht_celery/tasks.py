@@ -46,11 +46,11 @@ def run_command( self , command, env=None, timeout=600  ):
     output = ""
     error = ""
     retcode = 0
-    signal.alarm(timeout)
+    #signal.alarm(timeout)
     try:
         (output, error) = p.communicate()
         retcode=p.poll()
-        signal.alarm(0)  # reset the alarm
+        #signal.alarm(0)  # reset the alarm
     except Exception as exc :
         raise exc
     if retcode != 0 :  # TO-DO need settings.FLAGS.RETRY.RETCODE

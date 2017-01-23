@@ -5,7 +5,6 @@ import os , time , sys
 
     
 class Monitor(object) :
-    file_success = '.log.thht.S'
     def __init__(self , host , port ):
         self.r = redis.Redis( host= host , port = port )
         self.file_success = '.log.thht.S'
@@ -18,6 +17,11 @@ class Monitor(object) :
         self._num_e = self.getnum( self._fe )
         self._num_f = self.getnum( self._ff )
         self._isAllPushed = False
+    
+    def _update(self, rlist ) :
+        new_len = self.r.llen( rlist )
+        endl = '\n'.encode('utf-8')
+        sp = ' '.encode('utf-8')
     def update(self):
         pass
         new_len = self.r.llen('success_list' )
@@ -61,6 +65,9 @@ class Monitor(object) :
                 fln = self.r.llen('fail_list')
                 aln = self.r.hlen('thht_id_name')
                 if sln + fln == aln :
+                    break
+                if sln + fln > aln :
+                    print('Something strange happen')
                     break
             if ( self.r.get("thht_kill") == b"KILL" ) :
                 break

@@ -24,9 +24,9 @@ app = Celery('ht_celery' ,
           include = ['ht_celery.tasks'] )
 
 app.conf.update(
-    result_expires = 3600 ,
-CELERYD_PREFETCH_MULTIPLIER = 1 , 
-CELERY_ACKS_LATE = True , 
+    result_expires = 3600 , # CELERY_TASK_RESULT_EXPIRES
+worker_prefetch_multiplier = 1, #CELERYD_PREFETCH_MULTIPLIER = 1 , 
+task_acks_late = True , #CELERY_ACKS_LATE = True , 
 #    result_serializer = "pickle" , 
 #    accept_content = ['pickle' , 'json']
 )

@@ -18,7 +18,13 @@ export LD_LIBRARY_PATH=$THHT_PYTHON_LIB:$LD_LIBRARY_PATH
 export PYTHONPATH=$THHT_PACKAGE_PATH
 ######################################
 
+#check safty for error double submit 
 
+check=`tools.sh -c`
+if [ s$check = snet ] ; then
+  echo "You may submited twice. Plase check again. Exit !"
+  exit 
+fi
 # make config server 
 config.py $@
 echo "THHT MSG: Config redis OK ."
