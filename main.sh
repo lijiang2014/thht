@@ -20,7 +20,7 @@ export PYTHONPATH=$THHT_PACKAGE_PATH
 
 #check safty for error double submit 
 
-check=`tools.sh -c`
+check=`tools.py -c`
 if [ s$check = snet ] ; then
   echo "You may submited twice. Plase check again. Exit !"
   exit 
@@ -36,8 +36,9 @@ setting.py
 
 
 if [ s$THHT_LOCAL_DEBUG = s ] ; then
-
-srun -N $[ SLURM_NNODES  ] -n $[ SLURM_NNODES  ] -c 24 --no-kill -W 9999999 run_thht_worker.sh &  # -x $THHT_HOST celery -A ht_celery worker -l info &> log.worker &
+srun -N $[ SLURM_NNODES  ] -n $[ SLURM_NNODES  ] hostname > hostfile
+/WORK/app/osenv/ln1/usr/local/mpi3-dynamic/bin/mpirun -f hostfile -np $[ SLURM_NNODES  ] run_thht_worker.sh &
+# srun -N $[ SLURM_NNODES  ] -n $[ SLURM_NNODES  ] -c 24 --no-kill -W 9999999 run_thht_worker.sh &  # -x $THHT_HOST celery -A ht_celery worker -l info &> log.worker &
 else 
 celery -A ht_celery worker -l info &> log.worker &
 echo "pass"
@@ -47,6 +48,14 @@ fi
  run.py  &> log.run &
 
  monitor.py
+
+if [ s$THHT_SAFTY_EXIT = s1  ] ; then
+
+#srun -N $[ SLURM_NNODES  ] -n $[ SLURM_NNODES  ] -W 9999999 safty_exit.sh
+/WORK/app/osenv/ln1/usr/local/mpi3-dynamic/bin/mpirun -f hostfile -np $[ SLURM_NNODES  ]  safty_exit.sh
+
+
+fi
 
 
 
