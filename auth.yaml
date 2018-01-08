@@ -1,0 +1,80 @@
+swagger: "2.0"
+info:
+  title: "Auth .MS"
+  description: "Bihu的认证服务."
+  version: "v0.0.1"
+  contact:
+    url: "http://10.127.48.20/starlight/guidelines/issues/48"
+host: "localhost:8000"
+basePath: "/"
+tags:
+- name: "auth"
+  description: "Bihu的认证服务.核心服务."
+schemes:
+- "http"
+paths:
+  /auth/login:
+    post:
+      tags:
+      - "auth"
+      summary: "登录系统."
+      description: "登录系统，获取Token,采用 HTTP Auth Basic , 即 账号密码Base64编码放在HEADER 中的 Authorization 中 。 "
+      operationId: "auth-login"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "Authorization"
+        in: "header"
+        description: "Basic <Base64 encode username:password>"
+        type: "string"
+      - in: body
+        name: body
+        description: " 也可以将 username 和 password 作为表单或json 格式传递过来 "
+        schema:
+          type: "string"
+          example: '{"username":"","password":""}'
+      responses:
+        200:
+          description: "successful operation,Token 存在在response 的header 中"
+          schema:
+            type: string
+            example: '{"token":"xxx","error":"xxx"}'
+        default:
+          description: Unexpected error
+definitions:
+  Wrap:
+    type: "object"
+    properties:
+      apiVersion:
+        type: "string"
+        example: "v0.0.1"
+      kind:
+        type: "string"
+        example: "objectfoo"
+      spec:
+        $ref: '#/definitions/ObjectFoo'
+      items:
+        type: "array"
+        example: []
+        items:
+          $ref: '#/definitions/ObjectFoo'
+  ObjectFoo:
+    type: "object"
+    required: 
+      - name
+    properties:
+      id:
+        type: "integer"
+        format: "int64"
+        readOnly: true
+      name:
+        type: "string"
+        example: "foofoofoo"
+      valueFoo:
+        type: "string"
+        example: "testvar"
+externalDocs:
+  description: "Find out more about Swagger"
+  url: "http://swagger.io"
